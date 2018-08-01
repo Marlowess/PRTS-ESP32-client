@@ -143,6 +143,9 @@ void wifi_init_sta(){
              
 }
 
+#ifdef __cplusplus
+  extern "C" {
+#endif
 void app_main()
 {
     //Initialize NVS
@@ -163,7 +166,9 @@ void app_main()
 #endif /*EXAMPLE_ESP_WIFI_MODE_AP*/
 
 }
-
+#ifdef __cplusplus
+  }
+#endif
 
 
 void printVector(uint8_t *v, int size, char *format){
