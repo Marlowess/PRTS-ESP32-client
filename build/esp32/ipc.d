@@ -18,7 +18,7 @@ ipc.o: /home/stefano/esp/esp-idf/components/esp32/ipc.c \
  /home/stefano/esp/esp-idf/components/newlib/include/string.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/assert.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
@@ -121,7 +121,7 @@ ipc.o: /home/stefano/esp/esp-idf/components/esp32/ipc.c \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/assert.h:
 

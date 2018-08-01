@@ -13,7 +13,7 @@ src/bootloader_clock.o: \
  /home/stefano/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/stefano/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/../include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/bootloader/../include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
  /home/stefano/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h
 
@@ -43,7 +43,7 @@ src/bootloader_clock.o: \
 
 /home/stefano/esp/esp-idf/components/esp32/include/esp_dport_access.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/../include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/bootloader/../include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
 

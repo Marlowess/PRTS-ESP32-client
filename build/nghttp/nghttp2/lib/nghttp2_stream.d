@@ -41,7 +41,7 @@ nghttp2/lib/nghttp2_stream.o: \
  /home/stefano/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h \
  /home/stefano/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/assert.h \
  /home/stefano/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h \
  /home/stefano/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h \
@@ -130,7 +130,7 @@ nghttp2/lib/nghttp2_stream.o: \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/assert.h:
 

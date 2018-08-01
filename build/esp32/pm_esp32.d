@@ -31,7 +31,7 @@ pm_esp32.o: /home/stefano/esp/esp-idf/components/esp32/pm_esp32.c \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/sched.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/assert.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_pm.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp32/pm.h \
@@ -158,7 +158,7 @@ pm_esp32.o: /home/stefano/esp/esp-idf/components/esp32/pm_esp32.c \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/assert.h:
 

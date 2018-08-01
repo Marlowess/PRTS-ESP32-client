@@ -30,7 +30,7 @@ core/tcp_out.o: /home/stefano/esp/esp-idf/components/lwip/core/tcp_out.c \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/stat.h \
  /home/stefano/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_task.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -184,7 +184,7 @@ core/tcp_out.o: /home/stefano/esp/esp-idf/components/lwip/core/tcp_out.c \
 
 /home/stefano/esp/esp-idf/components/esp32/include/esp_task.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/esp32/include/esp_system.h:
 

@@ -1,5 +1,4 @@
-simple_wifi.o: \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/main/simple_wifi.c \
+simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
  /home/stefano/esp/esp-idf/components/newlib/include/string.h \
  /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/stefano/esp/esp-idf/components/newlib/include/newlib.h \
@@ -19,7 +18,7 @@ simple_wifi.o: \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -124,7 +123,6 @@ simple_wifi.o: \
  /home/stefano/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/stefano/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/stefano/esp/esp-idf/components/nvs_flash/include/nvs.h \
- /home/stefano/esp/esp-idf/components/newlib/include/inttypes.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h
 
@@ -166,7 +164,7 @@ simple_wifi.o: \
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -376,9 +374,7 @@ simple_wifi.o: \
 
 /home/stefano/esp/esp-idf/components/nvs_flash/include/nvs.h:
 
-/home/stefano/esp/esp-idf/components/newlib/include/inttypes.h:
-
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
 
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h:
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/main/./simple_wifi.c:
+/home/stefano/git/esp32_2/main/./simple_wifi.cc:

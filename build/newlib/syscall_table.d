@@ -39,7 +39,7 @@ syscall_table.o: \
  /home/stefano/esp/esp-idf/components/vfs/include/esp_vfs.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/assert.h \
  /home/stefano/esp/esp-idf/components/newlib/include/dirent.h \
  /home/stefano/esp/esp-idf/components/vfs/include/sys/dirent.h \
@@ -123,7 +123,7 @@ syscall_table.o: \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/assert.h:
 

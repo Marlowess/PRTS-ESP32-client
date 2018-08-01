@@ -1,5 +1,5 @@
 intr_alloc.o: /home/stefano/esp/esp-idf/components/esp32/intr_alloc.c \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -82,7 +82,7 @@ intr_alloc.o: /home/stefano/esp/esp-idf/components/esp32/intr_alloc.c \
  /home/stefano/esp/esp-idf/components/log/include/esp_log.h \
  /home/stefano/esp/esp-idf/components/log/include/esp_log_internal.h
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/stdint.h:
 

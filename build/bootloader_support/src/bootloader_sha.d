@@ -22,7 +22,7 @@ src/bootloader_sha.o: \
  /home/stefano/esp/esp-idf/components/newlib/include/string.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/assert.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/param.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/syslimits.h \
@@ -77,7 +77,7 @@ src/bootloader_sha.o: \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/assert.h:
 

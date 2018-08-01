@@ -22,7 +22,7 @@ bt.o: /home/stefano/esp/esp-idf/components/bt/bt.c \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/stefano/esp/esp-idf/components/newlib/include/string.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/string.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -145,7 +145,7 @@ bt.o: /home/stefano/esp/esp-idf/components/bt/bt.c \
 
 /home/stefano/esp/esp-idf/components/newlib/include/sys/string.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/heap/include/esp_heap_caps.h:
 

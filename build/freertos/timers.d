@@ -19,7 +19,7 @@ timers.o: /home/stefano/esp/esp-idf/components/freertos/timers.c \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -122,7 +122,7 @@ timers.o: /home/stefano/esp/esp-idf/components/freertos/timers.c \
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

@@ -1,5 +1,5 @@
 int_wdt.o: /home/stefano/esp/esp-idf/components/esp32/int_wdt.c \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -87,7 +87,7 @@ int_wdt.o: /home/stefano/esp/esp-idf/components/esp32/int_wdt.c \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_dport_access.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_int_wdt.h
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/stdint.h:
 

@@ -16,7 +16,7 @@ hwcrypto/aes.o: /home/stefano/esp/esp-idf/components/esp32/hwcrypto/aes.c \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/stefano/esp/esp-idf/components/mbedtls/include/mbedtls/aes.h \
  /home/stefano/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
  /home/stefano/esp/esp-idf/components/newlib/include/limits.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
@@ -123,7 +123,7 @@ hwcrypto/aes.o: /home/stefano/esp/esp-idf/components/esp32/hwcrypto/aes.c \
 
 /home/stefano/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
 

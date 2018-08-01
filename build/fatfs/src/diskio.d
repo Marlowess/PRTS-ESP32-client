@@ -29,7 +29,7 @@ src/diskio.o: /home/stefano/esp/esp-idf/components/fatfs/src/diskio.c \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/stefano/esp/esp-idf/components/newlib/include/alloca.h \
@@ -154,7 +154,7 @@ src/diskio.o: /home/stefano/esp/esp-idf/components/fatfs/src/diskio.c \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/stdlib.h:
 

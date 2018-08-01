@@ -11,7 +11,7 @@ src/ffunicode.o: \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/param.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -107,7 +107,7 @@ src/ffunicode.o: \
 
 /home/stefano/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 

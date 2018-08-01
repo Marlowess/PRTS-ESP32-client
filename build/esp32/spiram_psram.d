@@ -1,5 +1,5 @@
 spiram_psram.o: /home/stefano/esp/esp-idf/components/esp32/spiram_psram.c \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/string.h \
  /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/stefano/esp/esp-idf/components/newlib/include/newlib.h \
@@ -59,7 +59,7 @@ spiram_psram.o: /home/stefano/esp/esp-idf/components/esp32/spiram_psram.c \
  /home/stefano/esp/esp-idf/components/esp32/include/rom/queue.h \
  /home/stefano/esp/esp-idf/components/driver/include/driver/periph_ctrl.h
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/string.h:
 

@@ -18,7 +18,7 @@ heap_trace.o: /home/stefano/esp/esp-idf/components/heap/heap_trace.c \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/param.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/heap/include/esp_heap_trace.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -125,7 +125,7 @@ heap_trace.o: /home/stefano/esp/esp-idf/components/heap/heap_trace.c \
 
 /home/stefano/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/heap/include/esp_heap_trace.h:
 

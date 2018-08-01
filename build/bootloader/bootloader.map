@@ -1,266 +1,266 @@
 Archive member included to satisfy reference by file (symbol)
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+/home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
                               (call_start_cpu0)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o) (bootloader_init)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (bootloader_clock_configure)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (bootloader_random_enable)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o) (bootloader_utility_load_partition_table)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (bootloader_mmap)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (bootloader_common_ota_select_valid)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (esp_partition_table_basic_verify)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (esp_image_load)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o) (bootloader_sha256_start)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o) (esp_log_timestamp)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (esp_rom_spiflash_unlock)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o) (esp_cpu_in_ocd_debug_mode)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (rtc_vddsdio_get_config)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o) (rtc_clk_slow_freq_get)
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o) (rtc_clk_cal_ratio)
+/home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                              /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o) (bootloader_init)
+/home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (bootloader_clock_configure)
+/home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (bootloader_random_enable)
+/home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                              /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o) (bootloader_utility_load_partition_table)
+/home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (bootloader_mmap)
+/home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (bootloader_common_ota_select_valid)
+/home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (esp_partition_table_basic_verify)
+/home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (esp_image_load)
+/home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o) (bootloader_sha256_start)
+/home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+                              /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o) (esp_log_timestamp)
+/home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (esp_rom_spiflash_unlock)
+/home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o) (esp_cpu_in_ocd_debug_mode)
+/home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (rtc_vddsdio_get_config)
+/home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o) (rtc_clk_slow_freq_get)
+/home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
+                              /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o) (rtc_clk_cal_ratio)
 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o) (__bswapsi2)
+                              /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o) (__bswapsi2)
 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
-                              /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o) (__udivdi3)
+                              /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o) (__udivdi3)
 
 Allocating common symbols
 Common symbol       size              file
 
 esp_image_spi_freq_t
-                    0x4               /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+                    0x4               /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
 
 Discarded input sections
 
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .xt.lit        0x0000000000000000       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .xt.prop       0x0000000000000000       0xe4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- COMMON         0x0000000000000000        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .xt.lit        0x0000000000000000       0x58 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .xt.prop       0x0000000000000000      0x594 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .xt.lit        0x0000000000000000        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .xt.prop       0x0000000000000000       0x48 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .xt.lit        0x0000000000000000       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .xt.prop       0x0000000000000000       0xcc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .xt.lit        0x0000000000000000       0x40 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .xt.prop       0x0000000000000000      0x54c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .xt.lit        0x0000000000000000       0x18 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .xt.prop       0x0000000000000000       0xe4 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ COMMON         0x0000000000000000        0x4 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .xt.lit        0x0000000000000000       0x58 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .xt.prop       0x0000000000000000      0x594 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .xt.lit        0x0000000000000000        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .xt.prop       0x0000000000000000       0x48 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .xt.lit        0x0000000000000000       0x18 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .xt.prop       0x0000000000000000       0xcc /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .xt.lit        0x0000000000000000       0x40 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .xt.prop       0x0000000000000000      0x54c /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  .literal.bootloader_flash_write
-                0x0000000000000000       0x40 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000000       0x40 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .literal.bootloader_flash_erase_sector
-                0x0000000000000000        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000000        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .text.bootloader_flash_write
-                0x0000000000000000       0xb2 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000000       0xb2 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .text.bootloader_flash_erase_sector
-                0x0000000000000000       0x16 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .xt.lit        0x0000000000000000       0x40 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .xt.prop       0x0000000000000000      0x360 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .xt.lit        0x0000000000000000       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .xt.prop       0x0000000000000000       0x90 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .xt.lit        0x0000000000000000        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .xt.prop       0x0000000000000000      0x144 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000000000000       0x16 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .xt.lit        0x0000000000000000       0x40 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .xt.prop       0x0000000000000000      0x360 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .xt.lit        0x0000000000000000       0x10 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .xt.prop       0x0000000000000000       0x90 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .xt.lit        0x0000000000000000        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .xt.prop       0x0000000000000000      0x144 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .literal.esp_image_verify_bootloader
-                0x0000000000000000        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .rodata        0x0000000000000000        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000000000000        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .rodata        0x0000000000000000        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .text.esp_image_verify_bootloader
-                0x0000000000000000       0x32 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .xt.lit        0x0000000000000000       0x50 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .xt.prop       0x0000000000000000      0x6a8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .xt.lit        0x0000000000000000       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .xt.prop       0x0000000000000000      0x198 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000000000000       0x32 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .xt.lit        0x0000000000000000       0x50 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .xt.prop       0x0000000000000000      0x6a8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .xt.lit        0x0000000000000000       0x18 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .xt.prop       0x0000000000000000      0x198 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .literal.esp_log_buffer_hex_internal
-                0x0000000000000000       0x50 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
+                0x0000000000000000       0x50 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
  .literal.esp_log_buffer_char_internal
-                0x0000000000000000       0x50 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
+                0x0000000000000000       0x50 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
  .literal.esp_log_buffer_hexdump_internal
-                0x0000000000000000       0x78 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
+                0x0000000000000000       0x78 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
  .rodata.str1.4
-                0x0000000000000000       0xa6 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
+                0x0000000000000000       0xa6 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
  .text.esp_log_buffer_hex_internal
-                0x0000000000000000      0x11a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
+                0x0000000000000000      0x11a /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
  .text.esp_log_buffer_char_internal
-                0x0000000000000000      0x107 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
+                0x0000000000000000      0x107 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
  .text.esp_log_buffer_hexdump_internal
-                0x0000000000000000      0x1da /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .xt.lit        0x0000000000000000       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .xt.prop       0x0000000000000000      0x354 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
+                0x0000000000000000      0x1da /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .xt.lit        0x0000000000000000       0x20 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .xt.prop       0x0000000000000000      0x354 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
  .literal.spi_cache_mode_switch
-                0x0000000000000000       0x38 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x38 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_chip_internal
-                0x0000000000000000       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x10 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_block_internal
-                0x0000000000000000       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x18 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_sector_internal
-                0x0000000000000000       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x18 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_enable_write
-                0x0000000000000000       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x10 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_program_page_internal
-                0x0000000000000000       0x24 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x24 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_lock
-                0x0000000000000000       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x18 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_config_readmode
-                0x0000000000000000       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x30 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_chip
-                0x0000000000000000        0xc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000        0xc /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_block
-                0x0000000000000000       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x20 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_sector
-                0x0000000000000000       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x20 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_write
-                0x0000000000000000       0x28 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x28 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_write_encrypted
-                0x0000000000000000       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x10 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_area
-                0x0000000000000000       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x18 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.spi_cache_mode_switch
-                0x0000000000000000      0x266 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000      0x266 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_chip_internal
-                0x0000000000000000       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x30 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_block_internal
-                0x0000000000000000       0x3c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x3c /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_sector_internal
-                0x0000000000000000       0x44 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x44 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_enable_write
-                0x0000000000000000       0x3d /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x3d /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_program_page_internal
-                0x0000000000000000       0xee /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0xee /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_lock
-                0x0000000000000000       0x4e /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x4e /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_config_readmode
-                0x0000000000000000       0xa0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0xa0 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .rodata.esp_rom_spiflash_config_readmode
-                0x0000000000000000       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x18 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_chip
-                0x0000000000000000       0x24 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x24 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_block
-                0x0000000000000000       0x66 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x66 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_sector
-                0x0000000000000000       0x65 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x65 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_write
-                0x0000000000000000       0xca /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0xca /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_write_encrypted
-                0x0000000000000000       0x5a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x5a /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_area
-                0x0000000000000000       0xbe /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .xt.lit        0x0000000000000000       0xa8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .xt.prop       0x0000000000000000      0xb1c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .xt.lit        0x0000000000000000        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .xt.prop       0x0000000000000000       0xc0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
+                0x0000000000000000       0xbe /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .xt.lit        0x0000000000000000       0xa8 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .xt.prop       0x0000000000000000      0xb1c /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .xt.lit        0x0000000000000000        0x8 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .xt.prop       0x0000000000000000       0xc0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
  .literal.rtc_init
-                0x0000000000000000       0xb8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x0000000000000000       0xb8 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
  .text.rtc_init
-                0x0000000000000000      0x344 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .xt.lit        0x0000000000000000       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .xt.prop       0x0000000000000000       0xfc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x0000000000000000      0x344 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .xt.lit        0x0000000000000000       0x18 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .xt.prop       0x0000000000000000       0xfc /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
  .literal.rtc_clk_32k_bootstrap
-                0x0000000000000000       0x34 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x34 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_32k_enabled
-                0x0000000000000000        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000        0x8 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_apll_enable
-                0x0000000000000000       0x50 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x50 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_slow_freq_get_hz
-                0x0000000000000000       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x10 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_from_mhz
-                0x0000000000000000        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000        0x4 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_to_xtal
-                0x0000000000000000       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x30 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_to_pll
-                0x0000000000000000       0x38 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x38 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_set_fast
-                0x0000000000000000       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x14 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_32k_bootstrap
-                0x0000000000000000       0xa2 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0xa2 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_32k_enabled
-                0x0000000000000000       0x1a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x1a /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_apll_enable
-                0x0000000000000000      0x15a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000      0x15a /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_slow_freq_get_hz
-                0x0000000000000000       0x27 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x27 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_from_mhz
-                0x0000000000000000       0x4c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x4c /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_to_xtal
-                0x0000000000000000       0x6f /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x6f /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_to_pll
-                0x0000000000000000       0xd1 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0xd1 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_set_fast
-                0x0000000000000000       0x38 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .xt.lit        0x0000000000000000       0xd8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .xt.prop       0x0000000000000000      0xb94 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x38 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xt.lit        0x0000000000000000       0xd8 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xt.prop       0x0000000000000000      0xb94 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cal
-                0x0000000000000000        0xc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000        0xc /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .literal.rtc_time_us_to_slowclk
-                0x0000000000000000        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000        0x4 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .literal.rtc_time_get
-                0x0000000000000000       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
- .data          0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
- .bss           0x0000000000000000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000       0x18 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .data          0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .bss           0x0000000000000000        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .text.rtc_clk_cal
-                0x0000000000000000       0x52 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000       0x52 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .text.rtc_time_us_to_slowclk
-                0x0000000000000000       0x1f /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000       0x1f /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .text.rtc_time_slowclk_to_us
-                0x0000000000000000       0x1c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000       0x1c /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .text.rtc_time_get
-                0x0000000000000000       0x50 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
- .xt.lit        0x0000000000000000       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
- .xt.prop       0x0000000000000000      0x258 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000       0x50 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xt.lit        0x0000000000000000       0x30 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xt.prop       0x0000000000000000      0x258 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .data          0x0000000000000000        0x0 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .bss           0x0000000000000000        0x0 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .xt.lit        0x0000000000000000        0x8 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
@@ -281,12 +281,12 @@ dram_seg         0x000000003fff0000 0x0000000000010000 rw
 Linker script and memory map
 
 START GROUP
-LOAD /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a
-LOAD /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a
-LOAD /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a
-LOAD /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/micro-ecc/libmicro-ecc.a
-LOAD /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a
-LOAD /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a
+LOAD /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a
+LOAD /home/stefano/git/esp32_2/build/bootloader/log/liblog.a
+LOAD /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a
+LOAD /home/stefano/git/esp32_2/build/bootloader/micro-ecc/libmicro-ecc.a
+LOAD /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a
+LOAD /home/stefano/git/esp32_2/build/bootloader/main/libmain.a
 LOAD /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a
 LOAD /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib/libstdc++.a
 LOAD /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcov.a
@@ -312,16 +312,16 @@ END GROUP
  *(.dynbss)
  *(.bss)
  *(.bss.*)
- .bss.mapped    0x000000003fff0000        0x1 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .bss.mapped    0x000000003fff0000        0x1 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  *fill*         0x000000003fff0001        0x3 
  .bss.ram_obfs_value
-                0x000000003fff0004        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000003fff0004        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .bss.words_hashed
-                0x000000003fff000c        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff000c        0x4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .bss.s_cur_freq
-                0x000000003fff0010        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0010        0x4 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .bss.s_cur_pll
-                0x000000003fff0014        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0014        0x4 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *(.gnu.linkonce.b.*)
  *(COMMON)
                 0x000000003fff0018                . = ALIGN (0x8)
@@ -332,7 +332,7 @@ END GROUP
  *(.data)
  *(.data.*)
  .data.current_read_mapping
-                0x000000003fff0018        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000003fff0018        0x4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  *(.gnu.linkonce.d.*)
  *(.data1)
  *(.sdata)
@@ -347,54 +347,54 @@ END GROUP
 .dram0.rodata   0x000000003fff001c     0x161c
                 0x000000003fff001c                _rodata_start = ABSOLUTE (.)
  *(.rodata)
- .rodata        0x000000003fff001c       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .rodata        0x000000003fff0030        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .rodata        0x000000003fff001c       0x14 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .rodata        0x000000003fff0030        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
  *(.rodata.*)
  .rodata.str1.4
-                0x000000003fff0038       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x000000003fff0038       0x3b /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
  *fill*         0x000000003fff0073        0x1 
  .rodata.str1.4
-                0x000000003fff0074      0x3c6 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x000000003fff0074      0x3c6 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                         0x3ce (size before relaxing)
  *fill*         0x000000003fff043a        0x2 
  .rodata.__func__$3801
-                0x000000003fff043c       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x000000003fff043c       0x10 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .rodata.str1.4
-                0x000000003fff044c      0x559 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000003fff044c      0x559 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x561 (size before relaxing)
  *fill*         0x000000003fff09a5        0x3 
  .rodata.str1.4
-                0x000000003fff09a8      0x28e /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000003fff09a8      0x28e /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  *fill*         0x000000003fff0c36        0x2 
  .rodata.str1.4
-                0x000000003fff0c38      0x163 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x000000003fff0c38      0x163 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  *fill*         0x000000003fff0d9b        0x1 
  .rodata.str1.4
-                0x000000003fff0d9c      0x45a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000003fff0d9c      0x45a /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x49a (size before relaxing)
  *fill*         0x000000003fff11f6        0x2 
  .rodata.str1.4
-                0x000000003fff11f8       0xcc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff11f8       0xcc /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .rodata.padding$2493
-                0x000000003fff12c4       0x40 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff12c4       0x40 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .rodata.__func__$2489
-                0x000000003fff1304       0x19 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff1304       0x19 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  *fill*         0x000000003fff131d        0x3 
  .rodata.__func__$2469
-                0x000000003fff1320       0x17 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff1320       0x17 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  *fill*         0x000000003fff1337        0x1 
  .rodata.str1.4
-                0x000000003fff1338      0x258 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff1338      0x258 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                         0x255 (size before relaxing)
  .rodata.rtc_clk_xtal_freq_estimate
-                0x000000003fff1590       0x64 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff1590       0x64 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.rtc_clk_cpu_freq_value
-                0x000000003fff15f4       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff15f4       0x14 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.__func__$2697
-                0x000000003fff1608       0x17 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff1608       0x17 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *fill*         0x000000003fff161f        0x1 
  .rodata.__func__$2682
-                0x000000003fff1620       0x15 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff1620       0x15 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
                 0x000000003fff1635                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
@@ -436,540 +436,540 @@ END GROUP
                 0x0000000040078000                _text_start = ABSOLUTE (.)
  *(.literal .text .literal.* .text.* .stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
  .literal.selected_boot_partition
-                0x0000000040078000        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000040078000        0x0 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
                                           0x4 (size before relaxing)
  .literal.select_image
-                0x0000000040078000       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000040078000       0x10 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x20 (size before relaxing)
  .literal.call_start_cpu0
-                0x0000000040078010        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000040078010        0x0 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
                                           0xc (size before relaxing)
  .literal.wdt_reset_cpu0_info_enable
-                0x0000000040078010        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078010        0x4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .literal.wdt_reset_info_dump
-                0x0000000040078014       0x5c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078014       0x5c /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x6c (size before relaxing)
  .literal.print_flash_info
-                0x0000000040078070       0x4c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078070       0x4c /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x68 (size before relaxing)
  .literal.vddsdio_configure
-                0x00000000400780bc        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400780bc        0x4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                           0xc (size before relaxing)
  .literal.uart_console_configure
-                0x00000000400780c0       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400780c0       0x14 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x18 (size before relaxing)
  .literal.wdt_reset_check
-                0x00000000400780d4        0xc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400780d4        0xc /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x30 (size before relaxing)
  .literal.update_flash_config
-                0x00000000400780e0       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400780e0       0x20 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .literal.bootloader_main
-                0x0000000040078100       0x24 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078100       0x24 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x74 (size before relaxing)
  .literal.__assert_func
-                0x0000000040078124        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078124        0x4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x10 (size before relaxing)
  .literal.bootloader_init
-                0x0000000040078128       0x48 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078128       0x48 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x74 (size before relaxing)
  .literal.bootloader_clock_configure
-                0x0000000040078170       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                0x0000000040078170       0x10 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
                                          0x20 (size before relaxing)
  .literal.bootloader_fill_random
-                0x0000000040078180        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078180        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .literal.bootloader_random_enable
-                0x0000000040078188       0x74 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078188       0x74 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x78 (size before relaxing)
  .literal.bootloader_random_disable
-                0x00000000400781fc       0x1c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x00000000400781fc       0x1c /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x4c (size before relaxing)
  .literal.log_invalid_app_partition
-                0x0000000040078218       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078218       0x14 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x2c (size before relaxing)
  .literal.try_load_partition
-                0x000000004007822c        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007822c        0x4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x14 (size before relaxing)
  .literal.set_cache_and_start_app
-                0x0000000040078230        0xc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078230        0xc /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x30 (size before relaxing)
  .literal.unpack_load_app
-                0x000000004007823c       0x1c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007823c       0x1c /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x34 (size before relaxing)
  .literal.bootloader_utility_load_partition_table
-                0x0000000040078258       0x40 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078258       0x40 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x84 (size before relaxing)
  .literal.bootloader_utility_get_selected_boot_partition
-                0x0000000040078298       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078298       0x18 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x70 (size before relaxing)
  .literal.bootloader_utility_load_boot_image
-                0x00000000400782b0        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400782b0        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x3c (size before relaxing)
  .literal.bootloader_utility_load_image
-                0x00000000400782b8        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400782b8        0x4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x18 (size before relaxing)
  .literal.spi_to_esp_err
-                0x00000000400782bc        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400782bc        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .literal.bootloader_flash_read_allow_decrypt
-                0x00000000400782c4       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400782c4       0x10 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x30 (size before relaxing)
  .literal.bootloader_flash_read_no_decrypt
-                0x00000000400782d4        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400782d4        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_mmap
-                0x00000000400782d4       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400782d4       0x14 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x50 (size before relaxing)
  .literal.bootloader_munmap
-                0x00000000400782e8        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400782e8        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_flash_read
-                0x00000000400782e8        0xc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400782e8        0xc /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x30 (size before relaxing)
  .literal.bootloader_common_ota_select_crc
-                0x00000000400782f4        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x00000000400782f4        0x4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
  .literal.bootloader_common_ota_select_valid
-                0x00000000400782f8        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x00000000400782f8        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                           0x4 (size before relaxing)
  .literal.esp_partition_table_basic_verify
-                0x00000000400782f8       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x00000000400782f8       0x30 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                          0x5c (size before relaxing)
  .literal.should_map
-                0x0000000040078328        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078328        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x10 (size before relaxing)
  .literal.verify_image_header
-                0x0000000040078328       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078328       0x14 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x2c (size before relaxing)
  .literal.verify_segment_header
-                0x000000004007833c        0xc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007833c        0xc /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x28 (size before relaxing)
  .literal.verify_checksum
-                0x0000000040078348        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078348        0x4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x1c (size before relaxing)
  .literal.process_segment_data
-                0x000000004007834c        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007834c        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x24 (size before relaxing)
  .literal.verify_simple_hash
-                0x0000000040078354        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078354        0x4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x2c (size before relaxing)
  .literal.should_load
-                0x0000000040078358        0xc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078358        0xc /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x18 (size before relaxing)
  .literal.process_segment
-                0x0000000040078364       0x1c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078364       0x1c /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x60 (size before relaxing)
  .literal.esp_image_load
-                0x0000000040078380       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078380       0x14 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x7c (size before relaxing)
  .literal.bootloader_sha256_start
-                0x0000000040078394        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040078394        0x8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .literal.bootloader_sha256_data
-                0x000000004007839c       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000004007839c       0x20 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0x30 (size before relaxing)
  .literal.bootloader_sha256_finish
-                0x00000000400783bc       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x00000000400783bc       0x18 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0x4c (size before relaxing)
  .literal.esp_log_early_timestamp
-                0x00000000400783d4        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
+                0x00000000400783d4        0x8 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
  .literal.esp_rom_spiflash_read_status
-                0x00000000400783dc       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783dc       0x10 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_wait_idle
-                0x00000000400783ec        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783ec        0x8 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_read_data
-                0x00000000400783f4       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783f4       0x10 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x18 (size before relaxing)
  .literal.esp_rom_spiflash_read_statushigh
-                0x0000000040078404        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078404        0x4 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_write_status
-                0x0000000040078408        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078408        0x0 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_unlock
-                0x0000000040078408        0xc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078408        0xc /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x28 (size before relaxing)
  .literal.esp_rom_spiflash_read
-                0x0000000040078414       0x3c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078414       0x3c /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x5c (size before relaxing)
  .literal.rtc_vddsdio_get_config
-                0x0000000040078450       0x24 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x0000000040078450       0x24 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
                                          0x30 (size before relaxing)
  .literal.rtc_vddsdio_set_config
-                0x0000000040078474        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x0000000040078474        0x4 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
                                           0x8 (size before relaxing)
  .literal.rtc_clk_32k_enable_internal
-                0x0000000040078478       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078478       0x10 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x14 (size before relaxing)
  .literal.rtc_clk_32k_enable
-                0x0000000040078488        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078488        0x4 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_8m_enable
-                0x000000004007848c        0xc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007848c        0xc /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x10 (size before relaxing)
  .literal.rtc_clk_8m_enabled
-                0x0000000040078498        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078498        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_8md256_enabled
-                0x0000000040078498        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078498        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_xtal_freq_estimate
-                0x0000000040078498       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078498       0x20 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x4c (size before relaxing)
  .literal.rtc_clk_slow_freq_set
-                0x00000000400784b8        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400784b8        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_slow_freq_get
-                0x00000000400784b8        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400784b8        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_fast_freq_set
-                0x00000000400784b8        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400784b8        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_fast_freq_get
-                0x00000000400784b8        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400784b8        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_bbpll_set
-                0x00000000400784b8       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400784b8       0x10 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x38 (size before relaxing)
  .literal.rtc_clk_xtal_freq_get
-                0x00000000400784c8        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400784c8        0x8 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x1c (size before relaxing)
  .literal.rtc_clk_cpu_freq_get
-                0x00000000400784d0       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400784d0       0x14 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x28 (size before relaxing)
  .literal.rtc_clk_cpu_freq_value
-                0x00000000400784e4       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400784e4       0x20 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x2c (size before relaxing)
  .literal.rtc_clk_xtal_freq_update
-                0x0000000040078504        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078504        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x8 (size before relaxing)
  .literal.rtc_clk_apb_freq_update
-                0x0000000040078504        0x4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078504        0x4 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x8 (size before relaxing)
  .literal.rtc_clk_cpu_freq_set
-                0x0000000040078508       0x1c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078508       0x1c /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x78 (size before relaxing)
  .literal.rtc_clk_apb_freq_get
-                0x0000000040078524        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078524        0x8 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x14 (size before relaxing)
  .literal.rtc_clk_init
-                0x000000004007852c       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007852c       0x20 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x94 (size before relaxing)
  .literal.rtc_clk_cal_internal
-                0x000000004007854c       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000004007854c       0x20 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x3c (size before relaxing)
  .literal.rtc_clk_cal_ratio
-                0x000000004007856c        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000004007856c        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
                                           0x8 (size before relaxing)
  .literal.rtc_clk_wait_for_slow_cycle
-                0x000000004007856c        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000004007856c        0x8 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x20 (size before relaxing)
  .literal       0x0000000040078574        0x8 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .iram1.literal
-                0x000000004007857c       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x000000004007857c       0x30 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x60 (size before relaxing)
  .iram1.literal
-                0x00000000400785ac       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
+                0x00000000400785ac       0x14 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
                                          0x30 (size before relaxing)
  .text.selected_boot_partition
-                0x00000000400785c0        0xc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x00000000400785c0        0xc /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x10 (size before relaxing)
  .text.select_image
-                0x00000000400785cc       0x52 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x00000000400785cc       0x52 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x5a (size before relaxing)
  *fill*         0x000000004007861e        0x2 
  .text.call_start_cpu0
-                0x0000000040078620       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000040078620       0x18 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x20 (size before relaxing)
                 0x0000000040078620                call_start_cpu0
  .text.wdt_reset_cpu0_info_enable
-                0x0000000040078638       0x27 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078638       0x27 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  *fill*         0x000000004007865f        0x1 
  .text.wdt_reset_info_dump
-                0x0000000040078660       0xe6 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078660       0xe6 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  *fill*         0x0000000040078746        0x2 
  .text.print_flash_info
-                0x0000000040078748       0xf6 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078748       0xf6 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  *fill*         0x000000004007883e        0x2 
  .text.vddsdio_configure
-                0x0000000040078840       0x33 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078840       0x33 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x37 (size before relaxing)
  *fill*         0x0000000040078873        0x1 
  .text.uart_console_configure
-                0x0000000040078874       0x36 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078874       0x36 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x3a (size before relaxing)
  *fill*         0x00000000400788aa        0x2 
  .text.wdt_reset_check
-                0x00000000400788ac       0xa2 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400788ac       0xa2 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0xae (size before relaxing)
  *fill*         0x000000004007894e        0x2 
  .text.update_flash_config
-                0x0000000040078950       0x68 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078950       0x68 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .text.bootloader_main
-                0x00000000400789b8       0xb0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400789b8       0xb0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0xdc (size before relaxing)
  .text.__assert_func
-                0x0000000040078a68       0x1f /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078a68       0x1f /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x23 (size before relaxing)
                 0x0000000040078a68                __assert_func
  *fill*         0x0000000040078a87        0x1 
  .text.bootloader_init
-                0x0000000040078a88      0x12a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040078a88      0x12a /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                         0x136 (size before relaxing)
                 0x0000000040078a88                bootloader_init
  *fill*         0x0000000040078bb2        0x2 
  .text.bootloader_clock_configure
-                0x0000000040078bb4       0x6e /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                0x0000000040078bb4       0x6e /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
                                          0x76 (size before relaxing)
                 0x0000000040078bb4                bootloader_clock_configure
  *fill*         0x0000000040078c22        0x2 
  .text.bootloader_fill_random
-                0x0000000040078c24       0x59 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078c24       0x59 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                 0x0000000040078c24                bootloader_fill_random
  *fill*         0x0000000040078c7d        0x3 
  .text.bootloader_random_enable
-                0x0000000040078c80      0x1d5 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078c80      0x1d5 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                 0x0000000040078c80                bootloader_random_enable
  *fill*         0x0000000040078e55        0x3 
  .text.bootloader_random_disable
-                0x0000000040078e58      0x11c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078e58      0x11c /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                 0x0000000040078e58                bootloader_random_disable
  .text.log_invalid_app_partition
-                0x0000000040078f74       0x57 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078f74       0x57 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x5b (size before relaxing)
  *fill*         0x0000000040078fcb        0x1 
  .text.try_load_partition
-                0x0000000040078fcc       0x34 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078fcc       0x34 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x38 (size before relaxing)
  .text.set_cache_and_start_app
-                0x0000000040079000       0xcf /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079000       0xcf /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  *fill*         0x00000000400790cf        0x1 
  .text.unpack_load_app
-                0x00000000400790d0       0xb2 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400790d0       0xb2 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0xb6 (size before relaxing)
  *fill*         0x0000000040079182        0x2 
  .text.bootloader_utility_load_partition_table
-                0x0000000040079184      0x15c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079184      0x15c /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x178 (size before relaxing)
                 0x0000000040079184                bootloader_utility_load_partition_table
  .text.bootloader_utility_get_selected_boot_partition
-                0x00000000400792e0      0x140 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400792e0      0x140 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x14c (size before relaxing)
                 0x00000000400792e0                bootloader_utility_get_selected_boot_partition
  .text.bootloader_utility_load_boot_image
-                0x0000000040079420       0xa6 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079420       0xa6 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0xba (size before relaxing)
                 0x0000000040079420                bootloader_utility_load_boot_image
  *fill*         0x00000000400794c6        0x2 
  .text.bootloader_utility_load_image
-                0x00000000400794c8       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400794c8       0x20 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x28 (size before relaxing)
                 0x00000000400794c8                bootloader_utility_load_image
  .text.spi_to_esp_err
-                0x00000000400794e8       0x22 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400794e8       0x22 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  *fill*         0x000000004007950a        0x2 
  .text.bootloader_flash_read_allow_decrypt
-                0x000000004007950c       0x97 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000004007950c       0x97 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x9b (size before relaxing)
  *fill*         0x00000000400795a3        0x1 
  .text.bootloader_flash_read_no_decrypt
-                0x00000000400795a4       0x32 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400795a4       0x32 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x36 (size before relaxing)
  *fill*         0x00000000400795d6        0x2 
  .text.bootloader_mmap
-                0x00000000400795d8       0xb1 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400795d8       0xb1 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0xb9 (size before relaxing)
                 0x00000000400795d8                bootloader_mmap
  *fill*         0x0000000040079689        0x3 
  .text.bootloader_munmap
-                0x000000004007968c       0x36 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000004007968c       0x36 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                 0x000000004007968c                bootloader_munmap
  *fill*         0x00000000400796c2        0x2 
  .text.bootloader_flash_read
-                0x00000000400796c4       0x86 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400796c4       0x86 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                 0x00000000400796c4                bootloader_flash_read
  *fill*         0x000000004007974a        0x2 
  .text.bootloader_common_ota_select_crc
-                0x000000004007974c       0x14 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x000000004007974c       0x14 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                 0x000000004007974c                bootloader_common_ota_select_crc
  .text.bootloader_common_ota_select_valid
-                0x0000000040079760       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040079760       0x20 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x24 (size before relaxing)
                 0x0000000040079760                bootloader_common_ota_select_valid
  .text.esp_partition_table_basic_verify
-                0x0000000040079780      0x143 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000040079780      0x143 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                         0x14f (size before relaxing)
                 0x0000000040079780                esp_partition_table_basic_verify
  *fill*         0x00000000400798c3        0x1 
  .text.should_map
-                0x00000000400798c4       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400798c4       0x30 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .text.verify_image_header
-                0x00000000400798f4       0x7e /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400798f4       0x7e /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  *fill*         0x0000000040079972        0x2 
  .text.verify_segment_header
-                0x0000000040079974       0x71 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079974       0x71 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x79 (size before relaxing)
  *fill*         0x00000000400799e5        0x3 
  .text.verify_checksum
-                0x00000000400799e8       0x87 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400799e8       0x87 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x8f (size before relaxing)
  *fill*         0x0000000040079a6f        0x1 
  .text.process_segment_data
-                0x0000000040079a70       0xa4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079a70       0xa4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0xb0 (size before relaxing)
  .text.verify_simple_hash
-                0x0000000040079b14       0x5b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079b14       0x5b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x6a (size before relaxing)
  *fill*         0x0000000040079b6f        0x1 
  .text.should_load
-                0x0000000040079b70       0x44 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079b70       0x44 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x48 (size before relaxing)
  .text.process_segment
-                0x0000000040079bb4      0x13a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079bb4      0x13a /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x146 (size before relaxing)
  *fill*         0x0000000040079cee        0x2 
  .text.esp_image_load
-                0x0000000040079cf0      0x256 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079cf0      0x256 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x272 (size before relaxing)
                 0x0000000040079cf0                esp_image_load
  *fill*         0x0000000040079f46        0x2 
  .text.bootloader_sha256_start
-                0x0000000040079f48       0x12 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079f48       0x12 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                 0x0000000040079f48                bootloader_sha256_start
  *fill*         0x0000000040079f5a        0x2 
  .text.bootloader_sha256_data
-                0x0000000040079f5c       0xa1 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079f5c       0xa1 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0xa9 (size before relaxing)
                 0x0000000040079f5c                bootloader_sha256_data
  *fill*         0x0000000040079ffd        0x3 
  .text.bootloader_sha256_finish
-                0x000000004007a000       0xdc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000004007a000       0xdc /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0xf0 (size before relaxing)
                 0x000000004007a000                bootloader_sha256_finish
  .text.esp_log_early_timestamp
-                0x000000004007a0dc       0x1f /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
+                0x000000004007a0dc       0x1f /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
                 0x000000004007a0dc                esp_log_timestamp
                 0x000000004007a0dc                esp_log_early_timestamp
  *fill*         0x000000004007a0fb        0x1 
  .text.esp_rom_spiflash_read_status
-                0x000000004007a0fc       0x61 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a0fc       0x61 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                 0x000000004007a0fc                esp_rom_spiflash_read_status
  *fill*         0x000000004007a15d        0x3 
  .text.esp_rom_spiflash_wait_idle
-                0x000000004007a160       0x32 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a160       0x32 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                 0x000000004007a160                esp_rom_spiflash_wait_idle
  *fill*         0x000000004007a192        0x2 
  .text.esp_rom_spiflash_read_data
-                0x000000004007a194       0xe2 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a194       0xe2 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  *fill*         0x000000004007a276        0x2 
  .text.esp_rom_spiflash_read_statushigh
-                0x000000004007a278       0x21 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a278       0x21 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                 0x000000004007a278                esp_rom_spiflash_read_statushigh
  *fill*         0x000000004007a299        0x3 
  .text.esp_rom_spiflash_write_status
-                0x000000004007a29c       0x34 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a29c       0x34 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x38 (size before relaxing)
                 0x000000004007a29c                esp_rom_spiflash_write_status
  .text.esp_rom_spiflash_unlock
-                0x000000004007a2d0       0x6a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a2d0       0x6a /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x7e (size before relaxing)
                 0x000000004007a2d0                esp_rom_spiflash_unlock
  *fill*         0x000000004007a33a        0x2 
  .text.esp_rom_spiflash_read
-                0x000000004007a33c      0x284 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a33c      0x284 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                 0x000000004007a33c                esp_rom_spiflash_read
  .text.rtc_vddsdio_get_config
-                0x000000004007a5c0      0x113 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x000000004007a5c0      0x113 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
                 0x000000004007a5c0                rtc_vddsdio_get_config
  *fill*         0x000000004007a6d3        0x1 
  .text.rtc_vddsdio_set_config
-                0x000000004007a6d4       0x46 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x000000004007a6d4       0x46 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
                 0x000000004007a6d4                rtc_vddsdio_set_config
  *fill*         0x000000004007a71a        0x2 
  .text.rtc_clk_32k_enable_internal
-                0x000000004007a71c       0x81 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a71c       0x81 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *fill*         0x000000004007a79d        0x3 
  .text.rtc_clk_32k_enable
-                0x000000004007a7a0       0x2d /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a7a0       0x2d /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                 0x000000004007a7a0                rtc_clk_32k_enable
  *fill*         0x000000004007a7cd        0x3 
  .text.rtc_clk_8m_enable
-                0x000000004007a7d0       0x9d /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a7d0       0x9d /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                 0x000000004007a7d0                rtc_clk_8m_enable
  *fill*         0x000000004007a86d        0x3 
  .text.rtc_clk_8m_enabled
-                0x000000004007a870       0x19 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a870       0x19 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                 0x000000004007a870                rtc_clk_8m_enabled
  *fill*         0x000000004007a889        0x3 
  .text.rtc_clk_8md256_enabled
-                0x000000004007a88c       0x1a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a88c       0x1a /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                 0x000000004007a88c                rtc_clk_8md256_enabled
  *fill*         0x000000004007a8a6        0x2 
  .text.rtc_clk_xtal_freq_estimate
-                0x000000004007a8a8       0xa6 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a8a8       0xa6 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0xb2 (size before relaxing)
  *fill*         0x000000004007a94e        0x2 
  .text.rtc_clk_slow_freq_set
-                0x000000004007a950       0x27 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a950       0x27 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                 0x000000004007a950                rtc_clk_slow_freq_set
  *fill*         0x000000004007a977        0x1 
  .text.rtc_clk_slow_freq_get
-                0x000000004007a978       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a978       0x10 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                 0x000000004007a978                rtc_clk_slow_freq_get
  .text.rtc_clk_fast_freq_set
-                0x000000004007a988       0x2a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a988       0x2a /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                 0x000000004007a988                rtc_clk_fast_freq_set
  *fill*         0x000000004007a9b2        0x2 
  .text.rtc_clk_fast_freq_get
-                0x000000004007a9b4       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a9b4       0x10 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                 0x000000004007a9b4                rtc_clk_fast_freq_get
  .text.rtc_clk_bbpll_set
-                0x000000004007a9c4      0x170 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007a9c4      0x170 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                         0x178 (size before relaxing)
                 0x000000004007a9c4                rtc_clk_bbpll_set
  .text.rtc_clk_xtal_freq_get
-                0x000000004007ab34       0x38 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007ab34       0x38 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x3c (size before relaxing)
                 0x000000004007ab34                rtc_get_xtal
                 0x000000004007ab34                rtc_clk_xtal_freq_get
  .text.rtc_clk_cpu_freq_get
-                0x000000004007ab6c       0x88 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007ab6c       0x88 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x94 (size before relaxing)
                 0x000000004007ab6c                rtc_clk_cpu_freq_get
  .text.rtc_clk_cpu_freq_value
-                0x000000004007abf4       0x44 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007abf4       0x44 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x48 (size before relaxing)
                 0x000000004007abf4                rtc_clk_cpu_freq_value
  .text.rtc_clk_xtal_freq_update
-                0x000000004007ac38       0x12 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007ac38       0x12 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x16 (size before relaxing)
                 0x000000004007ac38                rtc_clk_xtal_freq_update
  *fill*         0x000000004007ac4a        0x2 
  .text.rtc_clk_apb_freq_update
-                0x000000004007ac4c       0x13 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007ac4c       0x13 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x16 (size before relaxing)
                 0x000000004007ac4c                rtc_clk_apb_freq_update
  *fill*         0x000000004007ac5f        0x1 
  .text.rtc_clk_cpu_freq_set
-                0x000000004007ac60      0x1bc /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007ac60      0x1bc /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                         0x1d0 (size before relaxing)
                 0x000000004007ac60                rtc_clk_cpu_freq_set
  .text.rtc_clk_apb_freq_get
-                0x000000004007ae1c       0x2a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007ae1c       0x2a /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                 0x000000004007ae1c                rtc_clk_apb_freq_get
  *fill*         0x000000004007ae46        0x2 
  .text.rtc_clk_init
-                0x000000004007ae48      0x182 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007ae48      0x182 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                         0x1ba (size before relaxing)
                 0x000000004007ae48                rtc_clk_init
  *fill*         0x000000004007afca        0x2 
  .text.rtc_clk_cal_internal
-                0x000000004007afcc      0x161 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000004007afcc      0x161 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  *fill*         0x000000004007b12d        0x3 
  .text.rtc_clk_cal_ratio
-                0x000000004007b130       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000004007b130       0x20 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x24 (size before relaxing)
                 0x000000004007b130                rtc_clk_cal_ratio
  .text.rtc_clk_wait_for_slow_cycle
-                0x000000004007b150       0x79 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000004007b150       0x79 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
                 0x000000004007b150                rtc_clk_wait_for_slow_cycle
  *fill*         0x000000004007b1c9        0x3 
  .text          0x000000004007b1cc       0x26 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
@@ -987,7 +987,7 @@ END GROUP
  *fill*         0x000000004007b1f2        0x0 
  *fill*         0x000000004007b1f2        0x2 
  .text.index_to_partition
-                0x000000004007b1f4       0x48 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007b1f4       0x48 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  *fill*         0x000000004007b23c        0x0 
  *fill*         0x000000004007b23c        0x0 
  *fill*         0x000000004007b23c        0x0 
@@ -1017,11 +1017,11 @@ END GROUP
  *fill*         0x000000004007b23c        0x0 
  *fill*         0x000000004007b23c        0x0 
  .text.clk_val_is_valid
-                0x000000004007b23c       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b23c       0x20 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.reg_val_to_clk_val
-                0x000000004007b25c        0x8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b25c        0x8 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.clk_val_to_reg_val
-                0x000000004007b264        0xe /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b264        0xe /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *fill*         0x000000004007b272        0x0 
  *fill*         0x000000004007b272        0x0 
  *fill*         0x000000004007b272        0x0 
@@ -1041,9 +1041,9 @@ END GROUP
                 0x000000004007b274                __udivdi3
  *(.iram1 .iram1.*)
  *fill*         0x000000004007b4f5        0x3 
- .iram1         0x000000004007b4f8      0x1df /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .iram1         0x000000004007b4f8      0x1df /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  *fill*         0x000000004007b6d7        0x1 
- .iram1         0x000000004007b6d8      0x11a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .iram1         0x000000004007b6d8      0x11a /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
                 0x000000004007b6d8                esp_cpu_stall
                 0x000000004007b76c                esp_cpu_unstall
                 0x000000004007b7c0                esp_cpu_reset
@@ -2880,239 +2880,239 @@ END GROUP
                 [!provide]                        PROVIDE (I2S1, 0x3ff6d000)
                 [!provide]                        PROVIDE (UART2, 0x3ff6e000)
                 0x0000000040008550                PROVIDE (ets_update_cpu_frequency, 0x40008550)
-OUTPUT(/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader.elf elf32-xtensa-le)
+OUTPUT(/home/stefano/git/esp32_2/build/bootloader/bootloader.elf elf32-xtensa-le)
 
 .debug_frame    0x0000000000000000      0xc90
- .debug_frame   0x0000000000000000       0x58 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_frame   0x0000000000000058      0x118 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_frame   0x0000000000000170       0x28 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_frame   0x0000000000000198       0x58 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_frame   0x00000000000001f0       0xe8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_frame   0x00000000000002d8       0xd0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_frame   0x00000000000003a8       0x40 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_frame   0x00000000000003e8       0x28 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_frame   0x0000000000000410      0x100 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_frame   0x0000000000000510       0x58 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_frame   0x0000000000000568       0x70 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .debug_frame   0x00000000000005d8      0x208 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_frame   0x00000000000007e0       0x70 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_frame   0x0000000000000850       0x58 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_frame   0x00000000000008a8      0x2e0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_frame   0x0000000000000b88       0xb8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_frame   0x0000000000000000       0x58 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_frame   0x0000000000000058      0x118 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_frame   0x0000000000000170       0x28 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_frame   0x0000000000000198       0x58 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_frame   0x00000000000001f0       0xe8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_frame   0x00000000000002d8       0xd0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_frame   0x00000000000003a8       0x40 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_frame   0x00000000000003e8       0x28 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_frame   0x0000000000000410      0x100 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_frame   0x0000000000000510       0x58 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_frame   0x0000000000000568       0x70 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .debug_frame   0x00000000000005d8      0x208 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_frame   0x00000000000007e0       0x70 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_frame   0x0000000000000850       0x58 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_frame   0x00000000000008a8      0x2e0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_frame   0x0000000000000b88       0xb8 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_frame   0x0000000000000c40       0x28 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_frame   0x0000000000000c68       0x28 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_info     0x0000000000000000     0x95cb
- .debug_info    0x0000000000000000      0x50d /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_info    0x000000000000050d     0x1695 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_info    0x0000000000001ba2      0x264 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_info    0x0000000000001e06      0x258 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_info    0x000000000000205e     0x13d1 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_info    0x000000000000342f      0xbfa /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_info    0x0000000000004029      0x16b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_info    0x0000000000004194      0x526 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_info    0x00000000000046ba     0x1291 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_info    0x000000000000594b      0x44d /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_info    0x0000000000005d98      0x900 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .debug_info    0x0000000000006698      0xaf5 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_info    0x000000000000718d      0x118 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_info    0x00000000000072a5      0x3d8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_info    0x000000000000767d     0x151e /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_info    0x0000000000008b9b      0x39b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_info    0x0000000000000000      0x50d /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_info    0x000000000000050d     0x1695 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_info    0x0000000000001ba2      0x264 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_info    0x0000000000001e06      0x258 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_info    0x000000000000205e     0x13d1 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_info    0x000000000000342f      0xbfa /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_info    0x0000000000004029      0x16b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_info    0x0000000000004194      0x526 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_info    0x00000000000046ba     0x1291 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_info    0x000000000000594b      0x44d /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_info    0x0000000000005d98      0x900 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .debug_info    0x0000000000006698      0xaf5 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_info    0x000000000000718d      0x118 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_info    0x00000000000072a5      0x3d8 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_info    0x000000000000767d     0x151e /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_info    0x0000000000008b9b      0x39b /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_info    0x0000000000008f36       0xcd /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_info    0x0000000000009003      0x5c8 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_abbrev   0x0000000000000000     0x20fa
- .debug_abbrev  0x0000000000000000      0x18c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_abbrev  0x000000000000018c      0x41d /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_abbrev  0x00000000000005a9      0x108 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_abbrev  0x00000000000006b1      0x126 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_abbrev  0x00000000000007d7      0x3ae /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_abbrev  0x0000000000000b85      0x22f /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_abbrev  0x0000000000000db4       0xd5 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_abbrev  0x0000000000000e89      0x17b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_abbrev  0x0000000000001004      0x2a4 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_abbrev  0x00000000000012a8      0x17d /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_abbrev  0x0000000000001425      0x1f3 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .debug_abbrev  0x0000000000001618      0x22e /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_abbrev  0x0000000000001846       0x96 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_abbrev  0x00000000000018dc      0x15d /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_abbrev  0x0000000000001a39      0x388 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_abbrev  0x0000000000001dc1      0x17a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_abbrev  0x0000000000000000      0x18c /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_abbrev  0x000000000000018c      0x41d /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_abbrev  0x00000000000005a9      0x108 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_abbrev  0x00000000000006b1      0x126 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_abbrev  0x00000000000007d7      0x3ae /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_abbrev  0x0000000000000b85      0x22f /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_abbrev  0x0000000000000db4       0xd5 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_abbrev  0x0000000000000e89      0x17b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_abbrev  0x0000000000001004      0x2a4 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_abbrev  0x00000000000012a8      0x17d /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_abbrev  0x0000000000001425      0x1f3 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .debug_abbrev  0x0000000000001618      0x22e /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_abbrev  0x0000000000001846       0x96 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_abbrev  0x00000000000018dc      0x15d /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_abbrev  0x0000000000001a39      0x388 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_abbrev  0x0000000000001dc1      0x17a /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_abbrev  0x0000000000001f3b       0x60 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_abbrev  0x0000000000001f9b      0x15f /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_loc      0x0000000000000000     0x4d50
- .debug_loc     0x0000000000000000       0xb6 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_loc     0x00000000000000b6      0x751 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_loc     0x0000000000000807       0x91 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_loc     0x0000000000000898      0x872 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_loc     0x000000000000110a      0x638 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_loc     0x0000000000001742       0x74 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_loc     0x00000000000017b6      0x1b6 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_loc     0x000000000000196c      0xac1 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_loc     0x000000000000242d      0x135 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_loc     0x0000000000002562      0x4ad /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .debug_loc     0x0000000000002a0f      0xa20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_loc     0x000000000000342f       0x13 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_loc     0x0000000000003442      0x2dd /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_loc     0x000000000000371f      0xa5e /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_loc     0x000000000000417d      0x1ca /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_loc     0x0000000000000000       0xb6 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_loc     0x00000000000000b6      0x751 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_loc     0x0000000000000807       0x91 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_loc     0x0000000000000898      0x872 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_loc     0x000000000000110a      0x638 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_loc     0x0000000000001742       0x74 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_loc     0x00000000000017b6      0x1b6 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_loc     0x000000000000196c      0xac1 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_loc     0x000000000000242d      0x135 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_loc     0x0000000000002562      0x4ad /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .debug_loc     0x0000000000002a0f      0xa20 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_loc     0x000000000000342f       0x13 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_loc     0x0000000000003442      0x2dd /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_loc     0x000000000000371f      0xa5e /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_loc     0x000000000000417d      0x1ca /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_loc     0x0000000000004347       0x21 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_loc     0x0000000000004368      0x9e8 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_aranges  0x0000000000000000      0x580
  .debug_aranges
-                0x0000000000000000       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000000000000       0x30 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_aranges
-                0x0000000000000030       0x70 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000000000030       0x70 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .debug_aranges
-                0x00000000000000a0       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                0x00000000000000a0       0x20 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
  .debug_aranges
-                0x00000000000000c0       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x00000000000000c0       0x30 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .debug_aranges
-                0x00000000000000f0       0x60 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000000000f0       0x60 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  .debug_aranges
-                0x0000000000000150       0x58 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000150       0x58 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .debug_aranges
-                0x00000000000001a8       0x28 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x00000000000001a8       0x28 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
  .debug_aranges
-                0x00000000000001d0       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x00000000000001d0       0x20 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .debug_aranges
-                0x00000000000001f0       0x68 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000000001f0       0x68 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .debug_aranges
-                0x0000000000000258       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000000000258       0x30 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .debug_aranges
-                0x0000000000000288       0x38 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
+                0x0000000000000288       0x38 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
  .debug_aranges
-                0x00000000000002c0       0xc0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000000002c0       0xc0 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .debug_aranges
-                0x0000000000000380       0x38 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
+                0x0000000000000380       0x38 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
  .debug_aranges
-                0x00000000000003b8       0x30 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x00000000000003b8       0x30 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_aranges
-                0x00000000000003e8      0x108 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000000003e8      0x108 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_aranges
-                0x00000000000004f0       0x50 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x00000000000004f0       0x50 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_aranges
                 0x0000000000000540       0x20 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_aranges
                 0x0000000000000560       0x20 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_ranges   0x0000000000000000      0x548
- .debug_ranges  0x0000000000000000       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_ranges  0x0000000000000020       0x60 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_ranges  0x0000000000000080       0x10 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_ranges  0x0000000000000090       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_ranges  0x00000000000000b0       0x68 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_ranges  0x0000000000000118       0x48 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_ranges  0x0000000000000160       0x18 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_ranges  0x0000000000000178       0x58 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_ranges  0x00000000000001d0       0x70 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_ranges  0x0000000000000240       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_ranges  0x0000000000000260       0x28 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .debug_ranges  0x0000000000000288       0xb0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_ranges  0x0000000000000338       0x28 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_ranges  0x0000000000000360       0x20 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_ranges  0x0000000000000380      0x128 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_ranges  0x00000000000004a8       0x40 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_ranges  0x0000000000000000       0x20 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_ranges  0x0000000000000020       0x60 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_ranges  0x0000000000000080       0x10 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_ranges  0x0000000000000090       0x20 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_ranges  0x00000000000000b0       0x68 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_ranges  0x0000000000000118       0x48 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_ranges  0x0000000000000160       0x18 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_ranges  0x0000000000000178       0x58 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_ranges  0x00000000000001d0       0x70 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_ranges  0x0000000000000240       0x20 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_ranges  0x0000000000000260       0x28 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .debug_ranges  0x0000000000000288       0xb0 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_ranges  0x0000000000000338       0x28 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_ranges  0x0000000000000360       0x20 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_ranges  0x0000000000000380      0x128 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_ranges  0x00000000000004a8       0x40 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_ranges  0x00000000000004e8       0x60 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_line     0x0000000000000000     0x5a1c
- .debug_line    0x0000000000000000      0x367 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_line    0x0000000000000367      0x8cb /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_line    0x0000000000000c32      0x1da /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_line    0x0000000000000e0c      0x386 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_line    0x0000000000001192      0x8c1 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_line    0x0000000000001a53      0x570 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x0000000000001fc3      0x1e7 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_line    0x00000000000021aa      0x33c /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_line    0x00000000000024e6      0xa40 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_line    0x0000000000002f26      0x3bf /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_line    0x00000000000032e5      0x4da /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .debug_line    0x00000000000037bf      0xaca /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_line    0x0000000000004289      0x18e /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_line    0x0000000000004417      0x3c2 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_line    0x00000000000047d9      0xc98 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_line    0x0000000000005471      0x394 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x0000000000000000      0x367 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_line    0x0000000000000367      0x8cb /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_line    0x0000000000000c32      0x1da /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_line    0x0000000000000e0c      0x386 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_line    0x0000000000001192      0x8c1 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_line    0x0000000000001a53      0x570 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x0000000000001fc3      0x1e7 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_line    0x00000000000021aa      0x33c /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_line    0x00000000000024e6      0xa40 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x0000000000002f26      0x3bf /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_line    0x00000000000032e5      0x4da /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .debug_line    0x00000000000037bf      0xaca /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_line    0x0000000000004289      0x18e /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_line    0x0000000000004417      0x3c2 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_line    0x00000000000047d9      0xc98 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_line    0x0000000000005471      0x394 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_line    0x0000000000005805       0x89 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_line    0x000000000000588e      0x18e /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_str      0x0000000000000000     0x2950
- .debug_str     0x0000000000000000      0x489 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
-                                        0x515 (size before relaxing)
- .debug_str     0x0000000000000489      0x7ae /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
-                                        0xa9a (size before relaxing)
- .debug_str     0x0000000000000c37      0x234 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+.debug_str      0x0000000000000000     0x28e8
+ .debug_str     0x0000000000000000      0x46f /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+                                        0x4fb (size before relaxing)
+ .debug_str     0x000000000000046f      0x794 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                                        0xa80 (size before relaxing)
+ .debug_str     0x0000000000000c03      0x234 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
                                         0x371 (size before relaxing)
- .debug_str     0x0000000000000e6b       0xa9 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                                        0x23d (size before relaxing)
- .debug_str     0x0000000000000f14      0x2f8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
-                                        0x945 (size before relaxing)
- .debug_str     0x000000000000120c      0x222 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                        0x58a (size before relaxing)
- .debug_str     0x000000000000142e       0x7a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_str     0x0000000000000e37       0xa9 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                                        0x223 (size before relaxing)
+ .debug_str     0x0000000000000ee0      0x2f8 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                                        0x92b (size before relaxing)
+ .debug_str     0x00000000000011d8      0x222 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                                        0x570 (size before relaxing)
+ .debug_str     0x00000000000013fa       0x7a /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                         0x1d3 (size before relaxing)
- .debug_str     0x00000000000014a8       0xb6 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
-                                        0x3dd (size before relaxing)
- .debug_str     0x000000000000155e      0x306 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                                        0xa0c (size before relaxing)
- .debug_str     0x0000000000001864       0xef /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_str     0x0000000000001474       0xb6 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                                        0x3c3 (size before relaxing)
+ .debug_str     0x000000000000152a      0x306 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                                        0x9f2 (size before relaxing)
+ .debug_str     0x0000000000001830       0xef /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                         0x2b9 (size before relaxing)
- .debug_str     0x0000000000001953      0x1b8 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
-                                        0x35c (size before relaxing)
- .debug_str     0x0000000000001b0b      0x482 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_str     0x000000000000191f      0x19e /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+                                        0x342 (size before relaxing)
+ .debug_str     0x0000000000001abd      0x482 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                         0x74e (size before relaxing)
- .debug_str     0x0000000000001f8d       0x6d /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_str     0x0000000000001f3f       0x6d /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
                                         0x179 (size before relaxing)
- .debug_str     0x0000000000001ffa       0xb6 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_str     0x0000000000001fac       0xb6 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
                                         0x230 (size before relaxing)
- .debug_str     0x00000000000020b0      0x563 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                        0x971 (size before relaxing)
- .debug_str     0x0000000000002613      0x129 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_str     0x0000000000002062      0x549 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                        0x957 (size before relaxing)
+ .debug_str     0x00000000000025ab      0x129 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
                                         0x36b (size before relaxing)
- .debug_str     0x000000000000273c      0x138 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .debug_str     0x00000000000026d4      0x138 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
                                         0x1de (size before relaxing)
- .debug_str     0x0000000000002874       0xdc /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_str     0x000000000000280c       0xdc /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
                                         0x258 (size before relaxing)
 
 .comment        0x0000000000000000       0x3a
- .comment       0x0000000000000000       0x3a /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
+ .comment       0x0000000000000000       0x3a /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x3b (size before relaxing)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .comment       0x000000000000003a       0x3b /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .comment       0x000000000000003a       0x3b /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .comment       0x000000000000003a       0x3b /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .comment       0x000000000000003a       0x3b /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .xtensa.info    0x0000000000000000       0x38
- .xtensa.info   0x0000000000000000       0x38 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/main/libmain.a(bootloader_start.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/log/liblog.a(log.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(cpu_util.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_init.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xtensa.info   0x0000000000000000       0x38 /home/stefano/git/esp32_2/build/bootloader/main/libmain.a(bootloader_start.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/log/liblog.a(log.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/stefano/git/esp32_2/build/bootloader/soc/libsoc.a(rtc_time.o)
  .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .xtensa.info   0x0000000000000038        0x0 /home/stefano/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)

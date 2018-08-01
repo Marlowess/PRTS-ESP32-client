@@ -1,5 +1,5 @@
 stack_check.o: /home/stefano/esp/esp-idf/components/esp32/stack_check.c \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -56,7 +56,7 @@ stack_check.o: /home/stefano/esp/esp-idf/components/esp32/stack_check.c \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /home/stefano/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/esp32/include/esp_system.h:
 

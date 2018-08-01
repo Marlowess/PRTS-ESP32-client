@@ -37,7 +37,7 @@ nghttp2/lib/nghttp2_frame.o: \
  /home/stefano/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h \
  /home/stefano/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/assert.h \
  /home/stefano/esp/esp-idf/components/newlib/include/errno.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/errno.h \
@@ -120,7 +120,7 @@ nghttp2/lib/nghttp2_frame.o: \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/assert.h:
 

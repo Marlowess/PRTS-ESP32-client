@@ -32,7 +32,7 @@ src/fast_crypto/fast_crypto_internal-cipher.o: \
  /home/stefano/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_assert.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/assert.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/stefano/esp/esp-idf/components/wpa_supplicant/include/crypto/crypto.h \
@@ -109,7 +109,7 @@ src/fast_crypto/fast_crypto_internal-cipher.o: \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/assert.h:
 

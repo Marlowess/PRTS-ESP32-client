@@ -31,7 +31,7 @@ nghttp2/lib/nghttp2_queue.o: \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/nghttp/port/include/nghttp2/nghttp2ver.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/assert.h
 
 /home/stefano/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_queue.h:
@@ -96,7 +96,7 @@ nghttp2/lib/nghttp2_queue.o: \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/assert.h:
 /home/stefano/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_queue.c:

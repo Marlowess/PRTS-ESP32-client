@@ -19,7 +19,7 @@ port/mbedtls_debug.o: \
  /home/stefano/esp/esp-idf/components/log/include/esp_log.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/stefano/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -96,7 +96,7 @@ port/mbedtls_debug.o: \
 
 /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 

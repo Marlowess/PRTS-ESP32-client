@@ -22,7 +22,7 @@ coexist.o: /home/stefano/esp/esp-idf/components/esp32/coexist.c \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/sched.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/stefano/esp/esp-idf/components/newlib/include/alloca.h \
@@ -75,7 +75,7 @@ coexist.o: /home/stefano/esp/esp-idf/components/esp32/coexist.c \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/stdlib.h:
 

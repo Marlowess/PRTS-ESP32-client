@@ -16,7 +16,7 @@ partition.o: /home/stefano/esp/esp-idf/components/spi_flash/partition.c \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/stefano/esp/esp-idf/components/newlib/include/alloca.h \
  /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/newlib/include/assert.h \
  /home/stefano/esp/esp-idf/components/newlib/include/string.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/string.h \
@@ -77,7 +77,7 @@ partition.o: /home/stefano/esp/esp-idf/components/spi_flash/partition.c \
 
 /home/stefano/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/assert.h:
 

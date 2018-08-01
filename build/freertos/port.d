@@ -27,7 +27,7 @@ port.o: /home/stefano/esp/esp-idf/components/freertos/port.c \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/config/system.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/simcall.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
@@ -145,7 +145,7 @@ port.o: /home/stefano/esp/esp-idf/components/freertos/port.c \
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

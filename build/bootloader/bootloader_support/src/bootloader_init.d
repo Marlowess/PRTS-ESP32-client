@@ -2,7 +2,7 @@ src/bootloader_init.o: \
  /home/stefano/esp/esp-idf/components/bootloader_support/src/bootloader_init.c \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/stefano/esp/esp-idf/components/log/include/esp_log.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/../include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/bootloader/../include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/stefano/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -51,7 +51,7 @@ src/bootloader_init.o: \
 
 /home/stefano/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/../include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/bootloader/../include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 

@@ -1,6 +1,6 @@
 src/secure_boot_signatures.o: \
  /home/stefano/esp/esp-idf/components/bootloader_support/src/secure_boot_signatures.c \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/../include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/bootloader/../include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/stefano/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
@@ -19,7 +19,7 @@ src/secure_boot_signatures.o: \
  /home/stefano/esp/esp-idf/components/micro-ecc/micro-ecc/uECC.h \
  /home/stefano/esp/esp-idf/components/esp32/include/rom/sha.h
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/bootloader/../include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/bootloader/../include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h:
 
