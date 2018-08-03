@@ -19,6 +19,8 @@
 #include "lwip/err.h"
 #include "lwip/sys.h"
 
+#include "controller.h"
+
 /* The examples use simple WiFi configuration that you can set via
    'make menuconfig'.
 
@@ -40,8 +42,7 @@ const int WIFI_CONNECTED_BIT = BIT0;
 
 static const char *TAG = "simple wifi";
 
-static esp_err_t event_handler(void *ctx, system_event_t *event)
-{
+static esp_err_t event_handler(void *ctx, system_event_t *event){
     switch(event->event_id) {
     case SYSTEM_EVENT_STA_START:
         esp_wifi_connect();
@@ -52,12 +53,12 @@ static esp_err_t event_handler(void *ctx, system_event_t *event)
         xEventGroupSetBits(wifi_event_group, WIFI_CONNECTED_BIT);
         break;
     case SYSTEM_EVENT_AP_STACONNECTED:
-        ESP_LOGI(TAG, "station:"MACSTR" join, AID=%d",
+        ESP_LOGI(TAG, "station:" MACSTR " join, AID=%d",
                  MAC2STR(event->event_info.sta_connected.mac),
                  event->event_info.sta_connected.aid);
         break;
     case SYSTEM_EVENT_AP_STADISCONNECTED:
-        ESP_LOGI(TAG, "station:"MACSTR"leave, AID=%d",
+        ESP_LOGI(TAG, "station:" MACSTR "leave, AID=%d",
                  MAC2STR(event->event_info.sta_disconnected.mac),
                  event->event_info.sta_disconnected.aid);
         break;
@@ -71,8 +72,7 @@ static esp_err_t event_handler(void *ctx, system_event_t *event)
     return ESP_OK;
 }
 
-void wifi_init_sta()
-{
+void wifi_init_sta(){
     wifi_event_group = xEventGroupCreate();
 
     tcpip_adapter_init();
@@ -100,8 +100,7 @@ void wifi_init_sta()
 #ifdef __cplusplus
   extern "C" {
 #endif
-void app_main()
-{
+void app_main(){
     //Initialize NVS
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES) {
@@ -110,15 +109,26 @@ void app_main()
     }
     ESP_ERROR_CHECK(ret);
 
-#if EXAMPLE_ESP_WIFI_MODE_AP
-    ESP_LOGI(TAG, "ESP_WIFI_MODE_AP");
-    wifi_init_softap();
-#else
+    /* Entering in STA_MODE */
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     wifi_init_sta();
-#endif /*EXAMPLE_ESP_WIFI_MODE_AP*/
+
+    /* Creation of two tasks */
+    tasksCreation();
+
+
 
 }
 #ifdef __cplusplus
   }
 #endif
+
+
+
+
+
+
+
+
+
+

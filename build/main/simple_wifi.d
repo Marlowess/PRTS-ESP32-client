@@ -124,7 +124,8 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
  /home/stefano/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/stefano/esp/esp-idf/components/nvs_flash/include/nvs.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
- /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h \
+ /home/stefano/git/esp32_2/main/controller.h
 
 /home/stefano/esp/esp-idf/components/newlib/include/string.h:
 
@@ -377,4 +378,6 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
 
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h:
+
+/home/stefano/git/esp32_2/main/controller.h:
 /home/stefano/git/esp32_2/main/./simple_wifi.cc:
