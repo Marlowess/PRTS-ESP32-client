@@ -1,20 +1,17 @@
 simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
- /home/stefano/esp/esp-idf/components/newlib/include/string.h \
+ /home/stefano/git/esp32_2/main/controller.h \
+ /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/stefano/esp/esp-idf/components/newlib/include/newlib.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/config.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/features.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h \
- /home/stefano/esp/esp-idf/components/newlib/include/sys/reent.h \
- /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_types.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/_types.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/lock.h \
- /home/stefano/esp/esp-idf/components/newlib/include/sys/cdefs.h \
- /home/stefano/esp/esp-idf/components/newlib/include/sys/string.h \
- /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -30,6 +27,8 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdlib.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/stefano/esp/esp-idf/components/newlib/include/alloca.h \
  /home/stefano/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -79,6 +78,8 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/task.h \
  /home/stefano/esp/esp-idf/components/newlib/include/limits.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/list.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/string.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/event_groups.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/timers.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -124,10 +125,13 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
  /home/stefano/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/stefano/esp/esp-idf/components/nvs_flash/include/nvs.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
- /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h \
- /home/stefano/git/esp32_2/main/controller.h
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h
 
-/home/stefano/esp/esp-idf/components/newlib/include/string.h:
+/home/stefano/git/esp32_2/main/controller.h:
+
+/home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/sys/reent.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h:
 
@@ -141,10 +145,6 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
 
 /home/stefano/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h:
 
-/home/stefano/esp/esp-idf/components/newlib/include/sys/reent.h:
-
-/home/stefano/esp/esp-idf/components/newlib/include/_ansi.h:
-
 /home/stefano/esp/esp-idf/components/newlib/include/sys/_types.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/machine/_types.h:
@@ -152,12 +152,6 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
 /home/stefano/esp/esp-idf/components/newlib/include/machine/_default_types.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/sys/lock.h:
-
-/home/stefano/esp/esp-idf/components/newlib/include/sys/cdefs.h:
-
-/home/stefano/esp/esp-idf/components/newlib/include/sys/string.h:
-
-/home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/stdint.h:
 
@@ -188,6 +182,10 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
 /home/stefano/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/stdlib.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/_ansi.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/sys/cdefs.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/machine/stdlib.h:
 
@@ -287,6 +285,10 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/list.h:
 
+/home/stefano/esp/esp-idf/components/newlib/include/string.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/sys/string.h:
+
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/event_groups.h:
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/timers.h:
@@ -378,6 +380,4 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
 
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h:
-
-/home/stefano/git/esp32_2/main/controller.h:
 /home/stefano/git/esp32_2/main/./simple_wifi.cc:
