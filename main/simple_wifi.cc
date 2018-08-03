@@ -23,10 +23,6 @@ void app_main(){
     }
     ESP_ERROR_CHECK(ret);
 
-    /* Entering in STA_MODE */
-    //ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
-    //wifi_init_sta();
-
     /* Creation of two tasks */
     tasksCreation();
 }

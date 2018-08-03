@@ -21,6 +21,11 @@
 
 #include "lwip/err.h"
 #include "lwip/sys.h"
+#include <tcpip_adapter.h>
+#include <lwip/sockets.h>
+#include "esp_wifi_types.h"
+#include <lwip/sockets.h>
+#include <inttypes.h>
 
 /* The examples use simple WiFi configuration that you can set via
    'make menuconfig'.
@@ -40,10 +45,43 @@ const int WIFI_CONNECTED_BIT = BIT0;
 
 static const char *TAG = "simple wifi";
 
+#define	WIFI_CHANNEL_MAX		(13)
+#define	WIFI_CHANNEL_SWITCH_INTERVAL	(500)
+
+static wifi_country_t wifi_country = {.cc="CN", .schan=1, .nchan=13, .policy=WIFI_COUNTRY_POLICY_AUTO};
+
+/********************  STRUCTURES FOR WIFI PACKET *************************/
+
+/**
+ * Header wifi-packet
+ *
+ */
+typedef struct {
+	unsigned frame_ctrl:16;
+	unsigned duration_id:16;
+	uint8_t addr1[6]; /* receiver address */
+	uint8_t addr2[6]; /* sender address */
+	uint8_t addr3[6]; /* filtering address */
+	unsigned sequence_ctrl:16;
+	uint8_t addr4[6]; /* optional */
+} wifi_ieee80211_mac_hdr_t;
+
+/**
+ * Wifi-packet: header + data
+ *
+ */
+typedef struct {
+	wifi_ieee80211_mac_hdr_t hdr;
+	uint8_t payload[0]; /* network data ended with 4 bytes csum (CRC32) */
+} wifi_ieee80211_packet_t;
+
 void sniffingFunc();
 void storingFunc();
 void tasksCreation();
 static esp_err_t event_handler(void *ctx, system_event_t *event);
 void wifi_init_sta();
+void wifi_sniffer_init();
+void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type);
+void changeChannel();
 
 #endif /* CONTROLLER_H_ */
