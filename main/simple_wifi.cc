@@ -14,7 +14,11 @@ void app_main(){
     ESP_ERROR_CHECK(ret);
 
     /* Creation of two tasks */
-    tasksCreation();
+    //printTime();
+    setTime(1533370708);
+    vTaskDelay(3000 / portTICK_PERIOD_MS);
+    printTime();
+    //tasksCreation();
 }
 #ifdef __cplusplus
   }

@@ -27,6 +27,8 @@
 #include <lwip/sockets.h>
 #include <inttypes.h>
 
+#include <sys/time.h>
+
 /* The examples use simple WiFi configuration that you can set via
    'make menuconfig'.
 
@@ -83,5 +85,7 @@ void wifi_init_sta();
 void wifi_sniffer_init();
 void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type);
 void changeChannel();
+void printTime();
+void setTime(long);
 
 #endif /* CONTROLLER_H_ */

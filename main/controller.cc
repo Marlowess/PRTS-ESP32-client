@@ -143,10 +143,10 @@ void wifi_sniffer_init(){
 	ESP_ERROR_CHECK( esp_wifi_init(&cfg));
 	ESP_ERROR_CHECK( esp_wifi_set_country(&wifi_country) ); /* set country for channel range [1, 13] */
 	ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
-    ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_NULL) );
+	ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_NULL) );
 
-    ESP_ERROR_CHECK(esp_wifi_set_promiscuous(true));
-    ESP_ERROR_CHECK(esp_wifi_set_promiscuous_rx_cb(&wifi_sniffer_packet_handler));
+	ESP_ERROR_CHECK(esp_wifi_set_promiscuous(true));
+	ESP_ERROR_CHECK(esp_wifi_set_promiscuous_rx_cb(&wifi_sniffer_packet_handler));
 
 	/* Filtro per catturare solo pacchetti di management */
 	wifi_promiscuous_filter_t filter;
@@ -186,23 +186,6 @@ void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type){
 
 	printf("--- Packet captured\n");
 
-	/*printf("CHAN=%02d, RSSI=%02d,"
-			" ADDR1=%02x:%02x:%02x:%02x:%02x:%02x,"
-			" ADDR2=%02x:%02x:%02x:%02x:%02x:%02x,"
-			" ADDR3=%02x:%02x:%02x:%02x:%02x:%02x\n",
-			ppkt->rx_ctrl.channel,
-			ppkt->rx_ctrl.rssi,
-			 ADDR1
-			hdr->addr1[0],hdr->addr1[1],hdr->addr1[2],
-			hdr->addr1[3],hdr->addr1[4],hdr->addr1[5],
-			 ADDR2
-			hdr->addr2[0],hdr->addr2[1],hdr->addr2[2],
-			hdr->addr2[3],hdr->addr2[4],hdr->addr2[5],
-			 ADDR3
-			hdr->addr3[0],hdr->addr3[1],hdr->addr3[2],
-			hdr->addr3[3],hdr->addr3[4],hdr->addr3[5]
-		);*/
-
 
 	const Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, ppkt->rx_ctrl.timestamp, ssid_, *ssid_len + 1);
 	myList->push_back(packet);
@@ -220,6 +203,32 @@ void changeChannel(){
 		printf("--- Canale di cattura: %d\n", channel);
 		channel = (channel % WIFI_CHANNEL_MAX) + 1;
 	}
+}
+
+void printTime(){
+	struct timeval time;
+	int res = gettimeofday(&time, NULL);
+	if(res == -1)
+		printf("Error on retrieving time\n");
+	else{
+		printf("Time OK\n");
+		printf("Seconds: %lld\n", (long long)time.tv_sec);
+	}
+}
+
+//1533370708
+
+void setTime(long seconds){
+	struct timeval time;
+	time.tv_sec = (time_t)seconds;
+	time.tv_usec = (suseconds_t)0;
+
+	int res = settimeofday(&time, NULL);
+	if(res == -1)
+		printf("Error on setting time\n");
+	else
+		printf("Time setting OK\n");
+
 }
 
 
