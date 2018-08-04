@@ -4,18 +4,22 @@
  *  Created on: 03 ago 2018
  *      Author: stefano
  */
-
-#include "controller.h"
+#include "../include/controller.h"
 #include <exception>
 #include <iostream>
+#include <list>
+#include "../include/wifi_packet.h"
 
 using namespace std;
+#define ebST_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY)
+#define ebSN_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY + 1)
 
 TaskHandle_t xHandleSniffing;
 TaskHandle_t xHandleStoring;
-#define ebST_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY)
-#define ebSN_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY + 1)
-static int firstFlag = true;
+
+/* This list contains the wifi packets */
+list<Wifi_packet> *myList;
+
 
 uint8_t channel = 1;
 int i = 13;
@@ -23,36 +27,46 @@ int i = 13;
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t wifi_event_group;
 
+/**
+ * This function is used to set the handler to save packets
+ *  **/
 void sniffingFunc(void *pvParameters){
 	while(true){
-		//int i;
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-		//for(i = 0; i < 15; i++)
-		//	printf("Packet %d captured!\n", i);
 		wifi_sniffer_init();
-		i = 13;
-		channel = 1;
 		changeChannel();
 		esp_wifi_set_promiscuous(false);
 		ESP_ERROR_CHECK(esp_wifi_stop());
 		ESP_ERROR_CHECK(esp_wifi_deinit());
-		//sleep(3);
 		xTaskNotifyGive(xHandleStoring);
 	}
 }
 
+/** This function is used to talk with the server and to send it the data about wifi packets
+ *  captured in the promiscuous mode before
+ *  **/
 void storingFunc(void *pvParameters){
 	while(true){
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
 		wifi_init_sta();
 		xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, false, true, portMAX_DELAY);
-		printf("Sniffing done, I'm talking with server...\n");
+
+		/*
+		 * Inserire qui la funzione per comunicare i dati letti al server
+		 */
+		printf("Catured %d packets in the last sniffing\n", myList->size());
+		myList->clear();
+
 		xEventGroupClearBits(wifi_event_group, WIFI_CONNECTED_BIT);
 		esp_wifi_disconnect();
 		xTaskNotifyGive(xHandleSniffing);
 	}
 }
 
+/**
+ * It creates two tasks: one to perform the sniffing operations, and another one
+ * to send data to the PC
+ * **/
 void tasksCreation(){
 	tcpip_adapter_init();
 	ESP_ERROR_CHECK(esp_event_loop_init(event_handler, NULL));
@@ -60,6 +74,7 @@ void tasksCreation(){
 	ESP_ERROR_CHECK(esp_wifi_init(&cfg));
 
 	wifi_event_group = xEventGroupCreate();
+	myList = new list<Wifi_packet>();
 
 	if(xTaskCreate(sniffingFunc, "Sniffing task", 2048, NULL, ebSN_BIT_TASK_PRIORITY, &xHandleSniffing) == pdPASS)
 		printf("Sniffing task created!\n");
@@ -75,6 +90,9 @@ void tasksCreation(){
 	xTaskNotifyGive(xHandleSniffing);
 }
 
+/**
+ * Any time a wifi event occures, this handler performs such operations
+ *  **/
 static esp_err_t event_handler(void *ctx, system_event_t *event){
 	switch(event->event_id) {
 	case SYSTEM_EVENT_STA_START:
@@ -95,13 +113,11 @@ static esp_err_t event_handler(void *ctx, system_event_t *event){
 	return ESP_OK;
 }
 
+/**
+ * It sets up the station mode, by connecting to server (that is in hotspot mode)
+ * and by obtaining an IP address to communicate with it
+ * **/
 void wifi_init_sta(){
-	/*tcpip_adapter_init();
-	if(firstFlag){
-		ESP_ERROR_CHECK(esp_event_loop_init(event_handler, NULL));
-
-	}*/
-
 	wifi_config_t wifi_config = {};
 	strcpy((char*)wifi_config.sta.ssid, EXAMPLE_ESP_WIFI_SSID);
 	strcpy((char*)wifi_config.sta.password, EXAMPLE_ESP_WIFI_PASS);
@@ -118,7 +134,10 @@ void wifi_init_sta(){
 			EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
 }
 
-
+/**
+ * It sets up the sniffer mode, by going in promiscous mode and setting
+ * the handler to threat the packets capture
+ * **/
 void wifi_sniffer_init(){
 	wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
 	ESP_ERROR_CHECK( esp_wifi_init(&cfg));
@@ -126,7 +145,6 @@ void wifi_sniffer_init(){
 	ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
     ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_NULL) );
 
-    //ESP_ERROR_CHECK(esp_wifi_start());
     ESP_ERROR_CHECK(esp_wifi_set_promiscuous(true));
     ESP_ERROR_CHECK(esp_wifi_set_promiscuous_rx_cb(&wifi_sniffer_packet_handler));
 
@@ -137,6 +155,9 @@ void wifi_sniffer_init(){
 
 }
 
+/**
+ * Handler to handle the packets captured by the esp32
+ *  **/
 void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type){
 
 	if (type != WIFI_PKT_MGMT)
@@ -163,30 +184,36 @@ void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type){
 	const wifi_ieee80211_packet_t *ipkt = (wifi_ieee80211_packet_t *)ppkt->payload;
 	const wifi_ieee80211_mac_hdr_t *hdr = &ipkt->hdr;
 
-	printf("--- Pacchetto catturato\n");
+	printf("--- Packet captured\n");
 
-	printf("CHAN=%02d, RSSI=%02d,"
+	/*printf("CHAN=%02d, RSSI=%02d,"
 			" ADDR1=%02x:%02x:%02x:%02x:%02x:%02x,"
 			" ADDR2=%02x:%02x:%02x:%02x:%02x:%02x,"
 			" ADDR3=%02x:%02x:%02x:%02x:%02x:%02x\n",
 			ppkt->rx_ctrl.channel,
 			ppkt->rx_ctrl.rssi,
-			/* ADDR1 */
+			 ADDR1
 			hdr->addr1[0],hdr->addr1[1],hdr->addr1[2],
 			hdr->addr1[3],hdr->addr1[4],hdr->addr1[5],
-			/* ADDR2 */
+			 ADDR2
 			hdr->addr2[0],hdr->addr2[1],hdr->addr2[2],
 			hdr->addr2[3],hdr->addr2[4],hdr->addr2[5],
-			/* ADDR3 */
+			 ADDR3
 			hdr->addr3[0],hdr->addr3[1],hdr->addr3[2],
 			hdr->addr3[3],hdr->addr3[4],hdr->addr3[5]
-		);
+		);*/
 
-	//const Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, ppkt->rx_ctrl.timestamp, ssid_, *ssid_len + 1);
-	//contr->addPacket(packet);
+
+	const Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, ppkt->rx_ctrl.timestamp, ssid_, *ssid_len + 1);
+	myList->push_back(packet);
 }
 
+/**
+ * When we're in promiscuous mode, this function changes the channel, to scan any wifi "space"
+ *  **/
 void changeChannel(){
+	i = 13;
+	channel = 1;
 	while(i-- > 0){
 		vTaskDelay(3000 / portTICK_PERIOD_MS);
 		esp_wifi_set_channel(channel, WIFI_SECOND_CHAN_NONE);

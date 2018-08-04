@@ -1,5 +1,5 @@
 simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
- /home/stefano/git/esp32_2/main/controller.h \
+ /home/stefano/git/esp32_2/main/../include/controller.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -130,7 +130,7 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
  /home/stefano/esp/esp-idf/components/newlib/include/inttypes.h
 
-/home/stefano/git/esp32_2/main/controller.h:
+/home/stefano/git/esp32_2/main/../include/controller.h:
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
