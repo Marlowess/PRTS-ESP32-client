@@ -15,10 +15,10 @@ void app_main(){
 
     /* Creation of two tasks */
     //printTime();
-    setTime(1533370708);
-    vTaskDelay(3000 / portTICK_PERIOD_MS);
-    printTime();
-    //tasksCreation();
+    setTime(1533751110);
+    //vTaskDelay(3000 / portTICK_PERIOD_MS);
+    //printTime();
+    tasksCreation();
 }
 #ifdef __cplusplus
   }

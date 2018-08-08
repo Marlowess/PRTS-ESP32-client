@@ -87,5 +87,6 @@ void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type);
 void changeChannel();
 void printTime();
 void setTime(long);
+long getTime();
 
 #endif /* CONTROLLER_H_ */

@@ -54,7 +54,10 @@ void storingFunc(void *pvParameters){
 		/*
 		 * Inserire qui la funzione per comunicare i dati letti al server
 		 */
-		printf("Catured %d packets in the last sniffing\n", myList->size());
+		//printf("Catured %d packets in the last sniffing\n", myList->size());
+		//myList->clear();
+		/*for (auto it = myList->begin(); it != myList->end(); ++it)
+		    it->printData();*/
 		myList->clear();
 
 		xEventGroupClearBits(wifi_event_group, WIFI_CONNECTED_BIT);
@@ -186,8 +189,11 @@ void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type){
 
 	printf("--- Packet captured\n");
 
+	long systemTime = getTime();
 
-	const Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, ppkt->rx_ctrl.timestamp, ssid_, *ssid_len + 1);
+	printf("System: %ld --- packet: %d --- total: %ld\n", systemTime, (int)(ppkt->rx_ctrl.timestamp/1000000), (long)(ppkt->rx_ctrl.timestamp/1000000+systemTime));
+
+	const Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, ppkt->rx_ctrl.timestamp + systemTime, ssid_, *ssid_len + 1);
 	myList->push_back(packet);
 }
 
@@ -229,6 +235,15 @@ void setTime(long seconds){
 	else
 		printf("Time setting OK\n");
 
+}
+
+long getTime(){
+	struct timeval time;
+	int res = gettimeofday(&time, NULL);
+	if(res == -1)
+		return (long)-1;
+	else
+		return (long long)time.tv_sec;
 }
 
 
