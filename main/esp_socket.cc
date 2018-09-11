@@ -59,6 +59,20 @@ void SendData(int sock, std::string data) {
   int nsend = -1;
   //strncpy(data, "WIFI_MODE_STA_NOW\0", 18);
   //printf("STAMPA: %s\n", data);
+  uint32_t dim = htonl(data.length());
+  //printf("SIZE: %d\n", data.length());
+  nsend = send(sock, &dim, sizeof(uint32_t), 0);
   nsend = send(sock, data.c_str(), data.length(), 0);
   //return nsend > 0;
+}
+
+long ReceiveData(int sock){
+	long time;
+	int result = recv(sock, (void *)&time, sizeof(long), 0);
+	time = ntohl(time);
+	/*if(result == -1)
+		printf("--- Error on receiving timestamp\n");
+	else
+		printf("--- Timestamp: %ld", time);*/
+	return time;
 }

@@ -29,7 +29,6 @@ std::string Wifi_packet::getReceiverAddr(){
 
 /* It returns signal intensity of packet */
 signed Wifi_packet::getRssi(){
-
 	return this->rssi;
 }
 

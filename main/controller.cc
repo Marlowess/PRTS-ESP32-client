@@ -24,8 +24,8 @@ list<Wifi_packet> *myList;
 
 uint8_t channel = 1;
 int i = 13;
-char const *address = "192.168.1.101";
-int port = 9876;
+char const *address = "192.168.1.104";
+int port = 1026;
 int s = -1;
 
 /* FreeRTOS event group to signal when we are connected*/
@@ -59,14 +59,19 @@ void storingFunc(void *pvParameters){
 		 * Inserire qui la funzione per comunicare i dati letti al server
 		 */
 
-		s = CreateSocket(address, 9876);
-		if(s != -1)
+		s = CreateSocket(address, 1026);
+		if(s != -1){
 			for (auto it = myList->begin(); it != myList->end(); ++it){
-				//it->printData();
 				string data = it->retrieveData();
 				cout << data << endl;
 				SendData(s, data);
 			}
+			SendData(s, std::move("|"));
+			cout << "End of packets transmission. Waiting for timestamp..." << '\n';
+			long time = ReceiveData(s);
+			setTime(time);
+			printf("--- Now: %ld\n", getTime());
+		}
 
 		//printf("Catured %d packets in the last sniffing\n", myList->size());
 		//myList->clear();
@@ -195,6 +200,7 @@ void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type){
 	for(i = 0; i < *ssid_len; i++){
 		ssid_[i] = *(char*)(pkkt->payload + 26 + i);
 	}
+
 	ssid_[i] = '\0';
 
 
