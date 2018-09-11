@@ -15,7 +15,7 @@ void app_main(){
 
     /* Creation of two tasks */
     //printTime();
-    setTime(1533751110);
+    //setTime(1533751110);
     //vTaskDelay(3000 / portTICK_PERIOD_MS);
     //printTime();
     tasksCreation();

@@ -17,6 +17,7 @@ using namespace std;
 
 TaskHandle_t xHandleSniffing;
 TaskHandle_t xHandleStoring;
+TaskHandle_t xHandleTimes; // task to exchange time informations
 
 /* This list contains the wifi packets */
 list<Wifi_packet> *myList;
@@ -30,6 +31,31 @@ int s = -1;
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t wifi_event_group;
+
+
+void timestampExchFunc(void *pvParameters){
+	while(true){
+		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+		wifi_init_sta();
+		xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, false, true, portMAX_DELAY);
+
+		cout << "--- Trying to connect" << '\n';
+		s = CreateSocket(address, 1026);
+		if(s != -1){
+			SendData(s, std::move("|"));
+			cout << "--- Timestamp request sent" << '\n';
+			long time = ReceiveData(s);
+			setTime(time);
+			printf("--- Current timestamp: %ld\n", getTime());
+		}
+
+		printf("--- Timestamp task ended, control given to sniffing task\n");
+
+		xEventGroupClearBits(wifi_event_group, WIFI_CONNECTED_BIT);
+		esp_wifi_disconnect();
+		xTaskNotifyGive(xHandleSniffing);
+	}
+}
 
 /**
  * This function is used to set the handler to save packets
@@ -104,13 +130,17 @@ void tasksCreation(){
 	else
 		printf("Error on creating the sniffing task!\n");
 
+	if(xTaskCreate(timestampExchFunc, "Timestamp task", 2048, NULL, ebSN_BIT_TASK_PRIORITY, &xHandleTimes) == pdPASS)
+		printf("Timestamp task created!\n");
+
 	if(xTaskCreate(storingFunc, "Storing task", 4096, NULL, ebST_BIT_TASK_PRIORITY, &xHandleStoring) == pdPASS)
 		printf("Storing task created!\n");
 	else
 		printf("Error on creating the storing task!\n");
 
 	/* The first task to launch is the sniffing task */
-	xTaskNotifyGive(xHandleSniffing);
+	//xTaskNotifyGive(xHandleSniffing);
+	xTaskNotifyGive(xHandleTimes);
 }
 
 /**
@@ -210,11 +240,11 @@ void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type){
 
 	printf("--- Packet captured\n");
 
-	long systemTime = getTime();
+	//long systemTime = getTime();
 
 	//printf("System: %ld --- packet: %d --- total: %ld\n\n", systemTime, (int)(ppkt->rx_ctrl.timestamp/1000000), (long)(ppkt->rx_ctrl.timestamp/1000000+systemTime));
 
-	const Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, ppkt->rx_ctrl.timestamp + systemTime, ssid_, *ssid_len + 1);
+	const Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, getTime(), ssid_, *ssid_len + 1);
 	myList->push_back(packet);
 }
 
