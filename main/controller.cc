@@ -9,6 +9,7 @@
 #include <iostream>
 #include <list>
 #include "../include/wifi_packet.h"
+#include "../include/esp_socket.h"
 
 using namespace std;
 #define ebST_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY)
@@ -23,6 +24,9 @@ list<Wifi_packet> *myList;
 
 uint8_t channel = 1;
 int i = 13;
+char const *address = "192.168.1.101";
+int port = 9876;
+int s = -1;
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t wifi_event_group;
@@ -54,10 +58,21 @@ void storingFunc(void *pvParameters){
 		/*
 		 * Inserire qui la funzione per comunicare i dati letti al server
 		 */
+
+		s = CreateSocket(address, 9876);
+		if(s != -1)
+			for (auto it = myList->begin(); it != myList->end(); ++it){
+				//it->printData();
+				string data = it->retrieveData();
+				cout << data << '\n';
+				SendData(s, data);
+			}
+
 		//printf("Catured %d packets in the last sniffing\n", myList->size());
 		//myList->clear();
 		/*for (auto it = myList->begin(); it != myList->end(); ++it)
 		    it->printData();*/
+		CloseSocket(s);
 		myList->clear();
 
 		xEventGroupClearBits(wifi_event_group, WIFI_CONNECTED_BIT);
@@ -191,7 +206,7 @@ void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type){
 
 	long systemTime = getTime();
 
-	printf("System: %ld --- packet: %d --- total: %ld\n", systemTime, (int)(ppkt->rx_ctrl.timestamp/1000000), (long)(ppkt->rx_ctrl.timestamp/1000000+systemTime));
+	//printf("System: %ld --- packet: %d --- total: %ld\n\n", systemTime, (int)(ppkt->rx_ctrl.timestamp/1000000), (long)(ppkt->rx_ctrl.timestamp/1000000+systemTime));
 
 	const Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, ppkt->rx_ctrl.timestamp + systemTime, ssid_, *ssid_len + 1);
 	myList->push_back(packet);

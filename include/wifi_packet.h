@@ -50,6 +50,7 @@ public:
 			oss << int_array[temp];
 		return oss.str();
 	}
+	std::string retrieveData();
 
 private:
 	uint8_t addr1[6]; /* receiver address */

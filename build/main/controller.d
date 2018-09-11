@@ -129,7 +129,8 @@ controller.o: /home/stefano/git/esp32_2/main/controller.cc \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
  /home/stefano/esp/esp-idf/components/newlib/include/inttypes.h \
- /home/stefano/git/esp32_2/main/../include/wifi_packet.h
+ /home/stefano/git/esp32_2/main/../include/wifi_packet.h \
+ /home/stefano/git/esp32_2/main/../include/esp_socket.h
 
 /home/stefano/git/esp32_2/main/../include/controller.h:
 
@@ -392,4 +393,6 @@ controller.o: /home/stefano/git/esp32_2/main/controller.cc \
 /home/stefano/esp/esp-idf/components/newlib/include/inttypes.h:
 
 /home/stefano/git/esp32_2/main/../include/wifi_packet.h:
+
+/home/stefano/git/esp32_2/main/../include/esp_socket.h:
 /home/stefano/git/esp32_2/main/./controller.cc:
