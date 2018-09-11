@@ -64,7 +64,7 @@ void storingFunc(void *pvParameters){
 			for (auto it = myList->begin(); it != myList->end(); ++it){
 				//it->printData();
 				string data = it->retrieveData();
-				cout << data << '\n';
+				cout << data << endl;
 				SendData(s, data);
 			}
 

@@ -59,6 +59,6 @@ void SendData(int sock, std::string data) {
   int nsend = -1;
   //strncpy(data, "WIFI_MODE_STA_NOW\0", 18);
   //printf("STAMPA: %s\n", data);
-  nsend = send(sock, data.c_str(), strlen(data.c_str()), 0);
+  nsend = send(sock, data.c_str(), data.length(), 0);
   //return nsend > 0;
 }

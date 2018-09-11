@@ -13,7 +13,7 @@
 /* It returns sender address */
 std::string Wifi_packet::getSenderAddr(){
 	//std::string s = int_array_to_string(this->addr2, 6);
-	std::ostringstream oss;
+	//std::ostringstream oss;
 	char str[18] = "";
 	for(int i = 0; i < 5; i++)
 		sprintf(str, "%s%02x:", str, this->addr2[i]);
@@ -29,6 +29,7 @@ std::string Wifi_packet::getReceiverAddr(){
 
 /* It returns signal intensity of packet */
 signed Wifi_packet::getRssi(){
+
 	return this->rssi;
 }
 
@@ -64,7 +65,8 @@ std::string Wifi_packet::retrieveData(){
 	std::string senderMAC = getSenderAddr();
 	std::string ssid = getSSID();
 	std::string timestamp = std::to_string(getTimestamp());
-	oss << senderMAC << "," << ssid << "," << timestamp;
+	std::string rssi = std::to_string(getRssi());
+	oss << senderMAC << "," << ssid << "," << timestamp << "," << rssi << "\r\n";
 	std::string var = oss.str();
 	return var;
 }
