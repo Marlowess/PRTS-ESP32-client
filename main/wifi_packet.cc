@@ -65,7 +65,7 @@ std::string Wifi_packet::retrieveData(){
 	std::string ssid = getSSID();
 	std::string timestamp = std::to_string(getTimestamp());
 	std::string rssi = std::to_string(getRssi());
-	oss << senderMAC << "," << ssid << "," << timestamp << "," << rssi << "\r\n";
+	oss << senderMAC << "," << ssid << "," << timestamp << "," << rssi; //<< std::endl;
 	std::string var = oss.str();
 	return var;
 }

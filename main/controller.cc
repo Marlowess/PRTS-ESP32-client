@@ -12,6 +12,8 @@
 #include "../include/esp_socket.h"
 #include "../include/my_mdns.h"
 #include <unistd.h>
+#include <functional> //for std::hash
+#include <string>
 
 using namespace std;
 #define ebST_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY)
@@ -19,6 +21,7 @@ using namespace std;
 
 #define EXAMPLE_MDNS_HOSTNAME CONFIG_MDNS_HOSTNAME
 #define EXAMPLE_MDNS_INSTANCE CONFIG_MDNS_INSTANCE
+#define SERVER_HOSTNAME CONFIG_SERVER_HOSTNAME
 
 /* The event group allows multiple bits for each event,
    but we only care about one event - are we connected
@@ -43,6 +46,16 @@ static bool auto_reconnect = true;
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t wifi_event_group;
+
+static string hashFunction(string str){
+	hash<std::string> hasher;
+	auto hashed = hasher(str); //returns std::size_t
+	//cout << hashed << '\n'; //outputs 2146989006636459346 on my machine
+	stringstream ss;
+	ss << hashed << "\r\n";
+	string st = ss.str();
+	return st;
+}
 
 /**
  * It initialises the mdns protocol service
@@ -99,7 +112,7 @@ static void do_mdsnQuery(const char *host){
 	xEventGroupWaitBits(wifi_event_group, IP4_CONNECTED_BIT | IP6_CONNECTED_BIT,
 			false, true, portMAX_DELAY);
 	sleep(3);
-	query_mdns_host("sb");
+	query_mdns_host(SERVER_HOSTNAME);
 }
 
 /**
@@ -166,8 +179,14 @@ void storingFunc(void *pvParameters){
 		if(s != -1){
 			for (auto it = myList->begin(); it != myList->end(); ++it){
 				string data = it->retrieveData();
-				cout << data << endl;
-				SendData(s, data);
+				string hashCode = hashFunction(data);
+
+				stringstream ss;
+				ss << data << "," << hashCode;
+				string st = ss.str();
+
+				cout << st << endl;
+				SendData(s, st);
 			}
 			SendData(s, std::move("|"));
 			cout << "End of packets transmission. Waiting for timestamp..." << '\n';
@@ -222,6 +241,7 @@ void tasksCreation(){
 	//xTaskNotifyGive(xHandleSniffing);
 
 	xTaskNotifyGive(xHandleTimes);
+	//hashFunction(string("Stringa di prova!"));
 }
 
 /**
