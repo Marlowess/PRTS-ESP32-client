@@ -1,4 +1,5 @@
 #include "../include/controller.h"
+#include "../include/my_mdns.h"
 
 
 #ifdef __cplusplus
@@ -19,6 +20,7 @@ void app_main(){
     //vTaskDelay(3000 / portTICK_PERIOD_MS);
     //printTime();
     tasksCreation();
+    //mdnsFunc();
 }
 #ifdef __cplusplus
   }

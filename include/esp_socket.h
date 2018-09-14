@@ -4,7 +4,7 @@
 #include <string>
 
 void CloseSocket(int sock);
-int CreateSocket(const char *dest, int port);
+int CreateSocket(char *dest, int port);
 //void SendData(int sock, char *data);
 void SendData(int sock, std::string data);
 long ReceiveData(int sock);

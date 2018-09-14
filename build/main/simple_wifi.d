@@ -128,7 +128,13 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
- /home/stefano/esp/esp-idf/components/newlib/include/inttypes.h
+ /home/stefano/esp/esp-idf/components/newlib/include/inttypes.h \
+ /home/stefano/git/esp32_2/main/../include/my_mdns.h \
+ /home/stefano/esp/esp-idf/components/mdns/include/mdns.h \
+ /home/stefano/esp/esp-idf/components/esp32/include/esp_event.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/netdb.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/netdb.h
 
 /home/stefano/git/esp32_2/main/../include/controller.h:
 
@@ -389,4 +395,16 @@ simple_wifi.o: /home/stefano/git/esp32_2/main/simple_wifi.cc \
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/inttypes.h:
+
+/home/stefano/git/esp32_2/main/../include/my_mdns.h:
+
+/home/stefano/esp/esp-idf/components/mdns/include/mdns.h:
+
+/home/stefano/esp/esp-idf/components/esp32/include/esp_event.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/netdb.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/netdb.h:
 /home/stefano/git/esp32_2/main/./simple_wifi.cc:

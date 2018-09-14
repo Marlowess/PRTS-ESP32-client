@@ -22,7 +22,7 @@ void CloseSocket(int sock) {
   return;
 }
 
-int CreateSocket(const char *dest, int port) {
+int CreateSocket(char *dest, int port) {
   ESP_LOGI(TAG, "Entering CreateSocket() function");
   int sock, err;
   struct sockaddr_in temp;

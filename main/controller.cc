@@ -10,10 +10,21 @@
 #include <list>
 #include "../include/wifi_packet.h"
 #include "../include/esp_socket.h"
+#include "../include/my_mdns.h"
+#include <unistd.h>
 
 using namespace std;
 #define ebST_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY)
 #define ebSN_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY + 1)
+
+#define EXAMPLE_MDNS_HOSTNAME CONFIG_MDNS_HOSTNAME
+#define EXAMPLE_MDNS_INSTANCE CONFIG_MDNS_INSTANCE
+
+/* The event group allows multiple bits for each event,
+   but we only care about one event - are we connected
+   to the AP with an IP? */
+const int IP4_CONNECTED_BIT = BIT0;
+const int IP6_CONNECTED_BIT = BIT1;
 
 TaskHandle_t xHandleSniffing;
 TaskHandle_t xHandleStoring;
@@ -25,19 +36,84 @@ list<Wifi_packet> *myList;
 
 uint8_t channel = 1;
 int i = 13;
-char const *address = "192.168.1.104";
+char *address = "10.42.0.1";
 int port = 1026;
 int s = -1;
+static bool auto_reconnect = true;
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t wifi_event_group;
 
+/**
+ * It initialises the mdns protocol service
+ */
+static void initialise_mdns(void){
+    //initialize mDNS
+    ESP_ERROR_CHECK( mdns_init() );
+    //set mDNS hostname (required if you want to advertise services)
+    ESP_ERROR_CHECK( mdns_hostname_set(EXAMPLE_MDNS_HOSTNAME) );
+    //set default mDNS instance name
+    ESP_ERROR_CHECK( mdns_instance_name_set(EXAMPLE_MDNS_INSTANCE) );
 
+    //structure with TXT records
+    mdns_txt_item_t serviceTxtData[3] = {
+        {"board","esp32"},
+        {"u","user"},
+        {"p","password"}
+    };
+
+    //initialize service
+    ESP_ERROR_CHECK( mdns_service_add("ESP32-WebServer", "_http", "_tcp", 80, serviceTxtData, 3) );
+    //add another TXT item
+    ESP_ERROR_CHECK( mdns_service_txt_item_set("_http", "_tcp", "path", "/foobar") );
+    //change TXT item value
+    ESP_ERROR_CHECK( mdns_service_txt_item_set("_http", "_tcp", "u", "admin") );
+}
+
+/**
+ * This function allows to obtain the IP of a host by knowing its hostname.
+ */
+static void query_mdns_host(const char * host_name){
+    ESP_LOGI(TAG, "Query A: %s.local", host_name);
+
+    struct ip4_addr addr;
+    addr.addr = 0;
+
+    esp_err_t err = mdns_query_a(host_name, 2000,  &addr);
+    if(err){
+        if(err == ESP_ERR_NOT_FOUND){
+            ESP_LOGW(TAG, "%s: Host was not found!", esp_err_to_name(err));
+            return;
+        }
+        ESP_LOGE(TAG, "Query Failed: %s", esp_err_to_name(err));
+        return;
+    }
+
+    address = inet_ntoa(addr.addr);
+    ESP_LOGI(TAG, IPSTR, IP2STR(&addr));
+}
+
+static void do_mdsnQuery(const char *host){
+	cout << "--- Trying to find sb's IP address\n";
+	/* Wait for the callback to set the CONNECTED_BIT in the event group. */
+	xEventGroupWaitBits(wifi_event_group, IP4_CONNECTED_BIT | IP6_CONNECTED_BIT,
+			false, true, portMAX_DELAY);
+	sleep(3);
+	query_mdns_host("sb");
+}
+
+/**
+ * This function is able to exchange time informations with server.
+ * It will be used everytime to syncronize the internal clock of board,
+ * in order to perform a more accurate analysis.
+ */
 void timestampExchFunc(void *pvParameters){
 	while(true){
 		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
 		wifi_init_sta();
 		xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, false, true, portMAX_DELAY);
+
+		do_mdsnQuery("sb");
 
 		cout << "--- Trying to connect" << '\n';
 		s = CreateSocket(address, 1026);
@@ -71,6 +147,7 @@ void sniffingFunc(void *pvParameters){
 		xTaskNotifyGive(xHandleStoring);
 	}
 }
+
 
 /** This function is used to talk with the server and to send it the data about wifi packets
  *  captured in the promiscuous mode before
@@ -123,6 +200,9 @@ void tasksCreation(){
 	ESP_ERROR_CHECK(esp_wifi_init(&cfg));
 
 	wifi_event_group = xEventGroupCreate();
+
+	initialise_mdns();
+
 	myList = new list<Wifi_packet>();
 
 	if(xTaskCreate(sniffingFunc, "Sniffing task", 2048, NULL, ebSN_BIT_TASK_PRIORITY, &xHandleSniffing) == pdPASS)
@@ -140,31 +220,64 @@ void tasksCreation(){
 
 	/* The first task to launch is the sniffing task */
 	//xTaskNotifyGive(xHandleSniffing);
+
 	xTaskNotifyGive(xHandleTimes);
 }
 
 /**
  * Any time a wifi event occures, this handler performs such operations
  *  **/
+//static esp_err_t event_handler(void *ctx, system_event_t *event){
+//	switch(event->event_id) {
+//	case SYSTEM_EVENT_STA_START:
+//		esp_wifi_connect();
+//		ESP_LOGI(TAG, "STA START!\n");
+//		break;
+//	case SYSTEM_EVENT_STA_GOT_IP:
+//		ESP_LOGI(TAG, "got ip:%s",
+//				ip4addr_ntoa(&event->event_info.got_ip.ip_info.ip));
+//		xEventGroupSetBits(wifi_event_group, WIFI_CONNECTED_BIT);
+//		break;
+//	case SYSTEM_EVENT_STA_DISCONNECTED:
+//		ESP_LOGI(TAG, "Disconnected from sta_mode\n");
+//		break;
+//	default:
+//		break;
+//	}
+//	mdns_handle_system_event(ctx, event);
+//	return ESP_OK;
+//}
 static esp_err_t event_handler(void *ctx, system_event_t *event){
-	switch(event->event_id) {
-	case SYSTEM_EVENT_STA_START:
-		esp_wifi_connect();
-		ESP_LOGI(TAG, "STA START!\n");
-		break;
-	case SYSTEM_EVENT_STA_GOT_IP:
-		ESP_LOGI(TAG, "got ip:%s",
-				ip4addr_ntoa(&event->event_info.got_ip.ip_info.ip));
-		xEventGroupSetBits(wifi_event_group, WIFI_CONNECTED_BIT);
-		break;
-	case SYSTEM_EVENT_STA_DISCONNECTED:
-		ESP_LOGI(TAG, "Disconnected from sta_mode\n");
-		break;
-	default:
-		break;
-	}
-	return ESP_OK;
+    switch(event->event_id) {
+    case SYSTEM_EVENT_STA_START:
+        esp_wifi_connect();
+        break;
+    case SYSTEM_EVENT_STA_CONNECTED:
+        /* enable ipv6 */
+        tcpip_adapter_create_ip6_linklocal(TCPIP_ADAPTER_IF_STA);
+        break;
+    case SYSTEM_EVENT_STA_GOT_IP:
+        xEventGroupSetBits(wifi_event_group, IP4_CONNECTED_BIT);
+        break;
+    case SYSTEM_EVENT_AP_STA_GOT_IP6:
+        xEventGroupSetBits(wifi_event_group, IP6_CONNECTED_BIT);
+        break;
+    case SYSTEM_EVENT_STA_DISCONNECTED:
+        /* This is a workaround as ESP32 WiFi libs don't currently
+           auto-reassociate. */
+        if (auto_reconnect) {
+            esp_wifi_connect();
+        }
+        xEventGroupClearBits(wifi_event_group, IP4_CONNECTED_BIT | IP6_CONNECTED_BIT);
+        break;
+    default:
+        break;
+    }
+    mdns_handle_system_event(ctx, event);
+    return ESP_OK;
 }
+
+
 
 /**
  * It sets up the station mode, by connecting to server (that is in hotspot mode)
@@ -296,8 +409,3 @@ long getTime(){
 	else
 		return (long long)time.tv_sec;
 }
-
-
-
-
-
