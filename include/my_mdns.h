@@ -21,13 +21,5 @@
 #include "driver/gpio.h"
 #include <sys/socket.h>
 #include <netdb.h>
-//
-////void initialise_mdns();
-////void query_mdns_host(const char * host_name);
-////void mdns_print_results(mdns_result_t * results);
-////void initialise_wifi();
-////void query_mdns_service(const char * service_name, const char * proto);
-////esp_err_t event_handler(void *ctx, system_event_t *event);
-//
-//
+
 #endif /* INCLUDE_MY_MDNS_H_ */

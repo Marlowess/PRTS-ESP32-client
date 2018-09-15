@@ -47,10 +47,12 @@ static bool auto_reconnect = true;
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t wifi_event_group;
 
+/**
+ * This function creates an hash string before sending data to server
+ */
 static string hashFunction(string str){
 	hash<std::string> hasher;
 	auto hashed = hasher(str); //returns std::size_t
-	//cout << hashed << '\n'; //outputs 2146989006636459346 on my machine
 	stringstream ss;
 	ss << hashed << "\r\n";
 	string st = ss.str();
@@ -86,7 +88,7 @@ static void initialise_mdns(void){
 /**
  * This function allows to obtain the IP of a host by knowing its hostname.
  */
-static void query_mdns_host(const char * host_name){
+static int query_mdns_host(const char * host_name){
     ESP_LOGI(TAG, "Query A: %s.local", host_name);
 
     struct ip4_addr addr;
@@ -96,23 +98,29 @@ static void query_mdns_host(const char * host_name){
     if(err){
         if(err == ESP_ERR_NOT_FOUND){
             ESP_LOGW(TAG, "%s: Host was not found!", esp_err_to_name(err));
-            return;
+            return -1;
         }
         ESP_LOGE(TAG, "Query Failed: %s", esp_err_to_name(err));
-        return;
+        return -1;
     }
 
     address = inet_ntoa(addr.addr);
     ESP_LOGI(TAG, IPSTR, IP2STR(&addr));
+    return 0;
 }
 
+/**
+ *
+ */
 static void do_mdsnQuery(const char *host){
 	cout << "--- Trying to find sb's IP address\n";
+
 	/* Wait for the callback to set the CONNECTED_BIT in the event group. */
 	xEventGroupWaitBits(wifi_event_group, IP4_CONNECTED_BIT | IP6_CONNECTED_BIT,
 			false, true, portMAX_DELAY);
-	sleep(3);
-	query_mdns_host(SERVER_HOSTNAME);
+
+	/* Trying to connect until response is positive */
+	while(query_mdns_host(SERVER_HOSTNAME) == -1);
 }
 
 /**
@@ -126,7 +134,7 @@ void timestampExchFunc(void *pvParameters){
 		wifi_init_sta();
 		xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, false, true, portMAX_DELAY);
 
-		do_mdsnQuery("sb");
+		do_mdsnQuery(SERVER_HOSTNAME);
 
 		cout << "--- Trying to connect" << '\n';
 		s = CreateSocket(address, 1026);
@@ -195,10 +203,6 @@ void storingFunc(void *pvParameters){
 			printf("--- Now: %ld\n", getTime());
 		}
 
-		//printf("Catured %d packets in the last sniffing\n", myList->size());
-		//myList->clear();
-		/*for (auto it = myList->begin(); it != myList->end(); ++it)
-		    it->printData();*/
 		CloseSocket(s);
 		myList->clear();
 
@@ -245,28 +249,8 @@ void tasksCreation(){
 }
 
 /**
- * Any time a wifi event occures, this handler performs such operations
- *  **/
-//static esp_err_t event_handler(void *ctx, system_event_t *event){
-//	switch(event->event_id) {
-//	case SYSTEM_EVENT_STA_START:
-//		esp_wifi_connect();
-//		ESP_LOGI(TAG, "STA START!\n");
-//		break;
-//	case SYSTEM_EVENT_STA_GOT_IP:
-//		ESP_LOGI(TAG, "got ip:%s",
-//				ip4addr_ntoa(&event->event_info.got_ip.ip_info.ip));
-//		xEventGroupSetBits(wifi_event_group, WIFI_CONNECTED_BIT);
-//		break;
-//	case SYSTEM_EVENT_STA_DISCONNECTED:
-//		ESP_LOGI(TAG, "Disconnected from sta_mode\n");
-//		break;
-//	default:
-//		break;
-//	}
-//	mdns_handle_system_event(ctx, event);
-//	return ESP_OK;
-//}
+ * wifi callbacks handler
+ */
 static esp_err_t event_handler(void *ctx, system_event_t *event){
     switch(event->event_id) {
     case SYSTEM_EVENT_STA_START:
@@ -373,10 +357,6 @@ void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type){
 
 	printf("--- Packet captured\n");
 
-	//long systemTime = getTime();
-
-	//printf("System: %ld --- packet: %d --- total: %ld\n\n", systemTime, (int)(ppkt->rx_ctrl.timestamp/1000000), (long)(ppkt->rx_ctrl.timestamp/1000000+systemTime));
-
 	const Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, getTime(), ssid_, *ssid_len + 1);
 	myList->push_back(packet);
 }
@@ -407,7 +387,9 @@ void printTime(){
 }
 
 //1533370708
-
+/**
+ * It's set board time according to one received from server
+ */
 void setTime(long seconds){
 	struct timeval time;
 	time.tv_sec = (time_t)seconds;
@@ -421,6 +403,9 @@ void setTime(long seconds){
 
 }
 
+/**
+ * It gets time from board and sets timestamp field in captured packet
+ */
 long getTime(){
 	struct timeval time;
 	int res = gettimeofday(&time, NULL);

@@ -25,17 +25,6 @@ public:
 		ssid = ssid2;
 
 	};
-	/*Wifi_packet(const Wifi_packet &p2){
-			for(int i = 0; i < 6; i++){
-				this->addr1[i] = p2.addr1[i];
-				this->addr2[i] = p2.addr2[i];
-			}
-			this->rssi = p2.rssi;
-			this->timestamp = p2.timestamp;
-			//this->ssid = p2.ssid;	
-			std::string ssid2(p2->getSSID(), p2->getSSID()->size());
-			this->ssid = new std::string(ssid2);
-		};*/
 
 	~Wifi_packet(){};
 	void printData();

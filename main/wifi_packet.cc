@@ -3,13 +3,6 @@
 #include <iostream>
 #include <string>
 
-/*
-		uint8_t getSenderAddr();
-		uint8_t getReceiverAddr();
-		signed getRssi();
-		unsigned getTimestamp();
-
-*/
 /* It returns sender address */
 std::string Wifi_packet::getSenderAddr(){
 	//std::string s = int_array_to_string(this->addr2, 6);
