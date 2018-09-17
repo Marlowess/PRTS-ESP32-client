@@ -1,18 +1,3 @@
-#include <string.h>
-#include <unistd.h>
-
-
-#include <sys/types.h>
-#include <sys/socket.h>
-
-#include <netinet/in.h>
-#include <arpa/inet.h>
-
-#include <netinet/in.h> //"in" for "sockaddr_in"
-// #include <netdb.h> //"netdb" for "gethostbyname"
-#include <errno.h>
-
-#include "esp_log.h"
 #include "../include/esp_socket.h"
 
 static const char *TAG = "simple wifi";
@@ -57,22 +42,14 @@ int CreateSocket(char *dest, int port) {
 
 void SendData(int sock, std::string data) {
   int nsend = -1;
-  //strncpy(data, "WIFI_MODE_STA_NOW\0", 18);
-  //printf("STAMPA: %s\n", data);
   uint32_t dim = htonl(data.length());
-  //printf("SIZE: %d\n", data.length());
   nsend = send(sock, &dim, sizeof(uint32_t), 0);
   nsend = send(sock, data.c_str(), data.length(), 0);
-  //return nsend > 0;
 }
 
 long ReceiveData(int sock){
 	long time;
 	int result = recv(sock, (void *)&time, sizeof(long), 0);
 	time = ntohl(time);
-	/*if(result == -1)
-		printf("--- Error on receiving timestamp\n");
-	else
-		printf("--- Timestamp: %ld", time);*/
 	return time;
 }

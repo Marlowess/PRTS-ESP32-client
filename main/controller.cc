@@ -22,6 +22,7 @@ using namespace std;
 #define EXAMPLE_MDNS_HOSTNAME CONFIG_MDNS_HOSTNAME
 #define EXAMPLE_MDNS_INSTANCE CONFIG_MDNS_INSTANCE
 #define SERVER_HOSTNAME CONFIG_SERVER_HOSTNAME
+#define SERVER_PORT CONFIG_SERVER_PORT
 
 /* The event group allows multiple bits for each event,
    but we only care about one event - are we connected
@@ -33,19 +34,21 @@ TaskHandle_t xHandleSniffing;
 TaskHandle_t xHandleStoring;
 TaskHandle_t xHandleTimes; // task to exchange time informations
 
-/* This list contains the wifi packets */
+/* This list contains wifi packets */
 list<Wifi_packet> *myList;
 
 
 uint8_t channel = 1;
 int i = 13;
 char *address = "10.42.0.1";
-int port = 1026;
 int s = -1;
 static bool auto_reconnect = true;
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t wifi_event_group;
+
+/* Sets for select function */
+fd_set csetRead, csetWrite, csetErr;
 
 /**
  * This function creates an hash string before sending data to server
@@ -63,50 +66,50 @@ static string hashFunction(string str){
  * It initialises the mdns protocol service
  */
 static void initialise_mdns(void){
-    //initialize mDNS
-    ESP_ERROR_CHECK( mdns_init() );
-    //set mDNS hostname (required if you want to advertise services)
-    ESP_ERROR_CHECK( mdns_hostname_set(EXAMPLE_MDNS_HOSTNAME) );
-    //set default mDNS instance name
-    ESP_ERROR_CHECK( mdns_instance_name_set(EXAMPLE_MDNS_INSTANCE) );
+	//initialize mDNS
+	ESP_ERROR_CHECK( mdns_init() );
+	//set mDNS hostname (required if you want to advertise services)
+	ESP_ERROR_CHECK( mdns_hostname_set(EXAMPLE_MDNS_HOSTNAME) );
+	//set default mDNS instance name
+	ESP_ERROR_CHECK( mdns_instance_name_set(EXAMPLE_MDNS_INSTANCE) );
 
-    //structure with TXT records
-    mdns_txt_item_t serviceTxtData[3] = {
-        {"board","esp32"},
-        {"u","user"},
-        {"p","password"}
-    };
+	//structure with TXT records
+	mdns_txt_item_t serviceTxtData[3] = {
+			{"board","esp32"},
+			{"u","user"},
+			{"p","password"}
+	};
 
-    //initialize service
-    ESP_ERROR_CHECK( mdns_service_add("ESP32-WebServer", "_http", "_tcp", 80, serviceTxtData, 3) );
-    //add another TXT item
-    ESP_ERROR_CHECK( mdns_service_txt_item_set("_http", "_tcp", "path", "/foobar") );
-    //change TXT item value
-    ESP_ERROR_CHECK( mdns_service_txt_item_set("_http", "_tcp", "u", "admin") );
+	//initialize service
+	ESP_ERROR_CHECK( mdns_service_add("ESP32-WebServer", "_http", "_tcp", 80, serviceTxtData, 3) );
+	//add another TXT item
+	ESP_ERROR_CHECK( mdns_service_txt_item_set("_http", "_tcp", "path", "/foobar") );
+	//change TXT item value
+	ESP_ERROR_CHECK( mdns_service_txt_item_set("_http", "_tcp", "u", "admin") );
 }
 
 /**
  * This function allows to obtain the IP of a host by knowing its hostname.
  */
 static int query_mdns_host(const char * host_name){
-    ESP_LOGI(TAG, "Query A: %s.local", host_name);
+	ESP_LOGI(TAG, "Query A: %s.local", host_name);
 
-    struct ip4_addr addr;
-    addr.addr = 0;
+	struct ip4_addr addr;
+	addr.addr = 0;
 
-    esp_err_t err = mdns_query_a(host_name, 2000,  &addr);
-    if(err){
-        if(err == ESP_ERR_NOT_FOUND){
-            ESP_LOGW(TAG, "%s: Host was not found!", esp_err_to_name(err));
-            return -1;
-        }
-        ESP_LOGE(TAG, "Query Failed: %s", esp_err_to_name(err));
-        return -1;
-    }
+	esp_err_t err = mdns_query_a(host_name, 2000,  &addr);
+	if(err){
+		if(err == ESP_ERR_NOT_FOUND){
+			ESP_LOGW(TAG, "%s: Host was not found!", esp_err_to_name(err));
+			return -1;
+		}
+		ESP_LOGE(TAG, "Query Failed: %s", esp_err_to_name(err));
+		return -1;
+	}
 
-    address = inet_ntoa(addr.addr);
-    ESP_LOGI(TAG, IPSTR, IP2STR(&addr));
-    return 0;
+	address = inet_ntoa(addr.addr);
+	ESP_LOGI(TAG, IPSTR, IP2STR(&addr));
+	return 0;
 }
 
 /**
@@ -116,8 +119,7 @@ static void do_mdsnQuery(const char *host){
 	cout << "--- Trying to find sb's IP address\n";
 
 	/* Wait for the callback to set the CONNECTED_BIT in the event group. */
-	xEventGroupWaitBits(wifi_event_group, IP4_CONNECTED_BIT | IP6_CONNECTED_BIT,
-			false, true, portMAX_DELAY);
+	xEventGroupWaitBits(wifi_event_group, IP4_CONNECTED_BIT | IP6_CONNECTED_BIT, false, true, portMAX_DELAY);
 
 	/* Trying to connect until response is positive */
 	while(query_mdns_host(SERVER_HOSTNAME) == -1);
@@ -137,7 +139,7 @@ void timestampExchFunc(void *pvParameters){
 		do_mdsnQuery(SERVER_HOSTNAME);
 
 		cout << "--- Trying to connect" << '\n';
-		s = CreateSocket(address, 1026);
+		s = CreateSocket(address, SERVER_PORT);
 		if(s != -1){
 			SendData(s, std::move("|"));
 			cout << "--- Timestamp request sent" << '\n';
@@ -183,7 +185,7 @@ void storingFunc(void *pvParameters){
 		 * Inserire qui la funzione per comunicare i dati letti al server
 		 */
 
-		s = CreateSocket(address, 1026);
+		s = CreateSocket(address, SERVER_PORT);
 		if(s != -1){
 			for (auto it = myList->begin(); it != myList->end(); ++it){
 				string data = it->retrieveData();
@@ -249,36 +251,36 @@ void tasksCreation(){
 }
 
 /**
- * wifi callbacks handler
+ * Wifi callbacks handler
  */
 static esp_err_t event_handler(void *ctx, system_event_t *event){
-    switch(event->event_id) {
-    case SYSTEM_EVENT_STA_START:
-        esp_wifi_connect();
-        break;
-    case SYSTEM_EVENT_STA_CONNECTED:
-        /* enable ipv6 */
-        tcpip_adapter_create_ip6_linklocal(TCPIP_ADAPTER_IF_STA);
-        break;
-    case SYSTEM_EVENT_STA_GOT_IP:
-        xEventGroupSetBits(wifi_event_group, IP4_CONNECTED_BIT);
-        break;
-    case SYSTEM_EVENT_AP_STA_GOT_IP6:
-        xEventGroupSetBits(wifi_event_group, IP6_CONNECTED_BIT);
-        break;
-    case SYSTEM_EVENT_STA_DISCONNECTED:
-        /* This is a workaround as ESP32 WiFi libs don't currently
+	switch(event->event_id) {
+	case SYSTEM_EVENT_STA_START:
+		esp_wifi_connect();
+		break;
+	case SYSTEM_EVENT_STA_CONNECTED:
+		/* enable ipv6 */
+		tcpip_adapter_create_ip6_linklocal(TCPIP_ADAPTER_IF_STA);
+		break;
+	case SYSTEM_EVENT_STA_GOT_IP:
+		xEventGroupSetBits(wifi_event_group, IP4_CONNECTED_BIT);
+		break;
+	case SYSTEM_EVENT_AP_STA_GOT_IP6:
+		xEventGroupSetBits(wifi_event_group, IP6_CONNECTED_BIT);
+		break;
+	case SYSTEM_EVENT_STA_DISCONNECTED:
+		/* This is a workaround as ESP32 WiFi libs don't currently
            auto-reassociate. */
-        if (auto_reconnect) {
-            esp_wifi_connect();
-        }
-        xEventGroupClearBits(wifi_event_group, IP4_CONNECTED_BIT | IP6_CONNECTED_BIT);
-        break;
-    default:
-        break;
-    }
-    mdns_handle_system_event(ctx, event);
-    return ESP_OK;
+		if (auto_reconnect) {
+			esp_wifi_connect();
+		}
+		xEventGroupClearBits(wifi_event_group, IP4_CONNECTED_BIT | IP6_CONNECTED_BIT);
+		break;
+	default:
+		break;
+	}
+	mdns_handle_system_event(ctx, event);
+	return ESP_OK;
 }
 
 
@@ -414,3 +416,48 @@ long getTime(){
 	else
 		return (long long)time.tv_sec;
 }
+
+int setSelect(int s){
+	struct timeval tval;
+	int n;
+	FD_ZERO(&csetRead);
+	FD_ZERO(&csetErr);
+	FD_ZERO(&csetWrite);
+	FD_SET(s, &csetRead);
+	FD_SET(s, &csetWrite);
+	FD_SET(s, &csetErr);
+
+	tval.tv_sec = 3; // timeout di tre secondi
+	tval.tv_usec = 0; // zero millisecondi
+	n = select(FD_SETSIZE, &csetRead, &csetWrite, &csetErr, &tval);
+
+	return n;
+}
+
+int doActionSelect(int n, int s){
+	if(n == 0){ //nessun set ha soddisfatto le condizioni, quindi Ã¨ scaduto il tempo
+		fprintf(stderr, "No response from server after 3 seconds.\n");
+		CloseSocket(s);
+		return -1;
+	}
+	else{
+		if(FD_ISSET(s, &csetErr)){
+			fprintf(stderr, "An error has occured. The connection has been closed by server.");
+			CloseSocket(s);
+			return -1;
+		}
+		else{
+			// in questo caso non c'Ã¨ nulla da segnalare, perchÃ¨ lo sblocco Ã¨ avvenuto in seguito
+			// a nuovi dati da leggere o da scrivere
+			clearSetSelect(s);
+			return 0;
+		}
+	}
+}
+
+void clearSetSelect(int s){
+	FD_CLR(s, &csetRead);
+	FD_CLR(s, &csetWrite);
+	FD_CLR(s, &csetErr);
+}
+

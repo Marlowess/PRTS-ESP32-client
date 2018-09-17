@@ -29,12 +29,17 @@
 
 #include <sys/time.h>
 
+#include <sys/time.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+
 /* The examples use simple WiFi configuration that you can set via
    'make menuconfig'.
 
    If you'd rather not, just change the below entries to strings with
    the config you want - ie #define EXAMPLE_WIFI_SSID "mywifissid"
-*/
+ */
 #define EXAMPLE_ESP_WIFI_MODE_AP   CONFIG_ESP_WIFI_MODE_AP //TRUE:AP FALSE:STA
 #define EXAMPLE_ESP_WIFI_SSID      CONFIG_ESP_WIFI_SSID
 #define EXAMPLE_ESP_WIFI_PASS      CONFIG_ESP_WIFI_PASSWORD
@@ -51,6 +56,10 @@ static const char *TAG = "simple wifi";
 #define	WIFI_CHANNEL_SWITCH_INTERVAL	(500)
 
 static wifi_country_t wifi_country = {.cc="CN", .schan=1, .nchan=13, .policy=WIFI_COUNTRY_POLICY_AUTO};
+
+int setSelect(int s);
+int doActionSelect(int n, int s);
+void clearSetSelect(int s);
 
 /********************  STRUCTURES FOR WIFI PACKET *************************/
 
