@@ -146,10 +146,11 @@ void timestampExchFunc(void *pvParameters){
 			cout << "--- Timestamp request sent" << '\n';
 			long time = ReceiveData(s);
 			setTime(time);
-			printf("--- Current timestamp: %ld\n", getTime());
+			printf("--- Timestamp received: %ld\n", getTime());
+			waitResponse(s);
+			printf("--- Timestamp task ended, control given to sniffing task\n");
+			CloseSocket(s);
 		}
-
-		printf("--- Timestamp task ended, control given to sniffing task\n");
 
 		xEventGroupClearBits(wifi_event_group, WIFI_CONNECTED_BIT);
 		esp_wifi_disconnect();
@@ -199,12 +200,12 @@ void storingFunc(void *pvParameters){
 				cout << st << endl;
 				SendData(s, st);
 			}
-//			SendData(s, string("|"));
-//			cout << "End of packets transmission. Waiting for timestamp..." << '\n';
-//			long time = ReceiveData(s);
-//			//long time = 1;
-//			setTime(time);
-//			printf("--- Now: %ld\n", getTime());
+			//			SendData(s, string("|"));
+			//			cout << "End of packets transmission. Waiting for timestamp..." << '\n';
+			//			long time = ReceiveData(s);
+			//			//long time = 1;
+			//			setTime(time);
+			//			printf("--- Now: %ld\n", getTime());
 		}
 
 		CloseSocket(s);

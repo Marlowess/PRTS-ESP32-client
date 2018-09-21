@@ -71,5 +71,13 @@ unsigned long ReceiveData(int sock){
 }
 
 void waitResponse(int sock){
-
+	// The board will be locked until it not receives the signal to start capturing
+	char start[3];
+	int result = recv(sock, (void *)start, 2, 0);
+	if(result < 2)
+		printf("--- Error on receiving signal to start\n");
+	if(strcmp(start, "GO") == 0)
+		printf("--- Starting signal received\n");
+	else
+		printf("--- Wrong starting signal received\n");
 }
