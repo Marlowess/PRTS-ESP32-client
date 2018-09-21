@@ -3,53 +3,73 @@
 static const char *TAG = "simple wifi";
 
 void CloseSocket(int sock) {
-  close(sock);
-  return;
+	close(sock);
+	return;
 }
 
 int CreateSocket(char *dest, int port) {
-  ESP_LOGI(TAG, "Entering CreateSocket() function");
-  int sock, err;
-  struct sockaddr_in temp;
+	ESP_LOGI(TAG, "Entering CreateSocket() function");
+	int sock, err;
+	struct sockaddr_in temp;
 
-  //sock = socket(AF_INET, SOCK_STREAM, 0);
-  sock = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
-  if ( sock == -1 ) {
-    ESP_LOGI(TAG, "Error: sock() failed");
-    return -1;
-  }
+	//sock = socket(AF_INET, SOCK_STREAM, 0);
+	sock = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
+	if ( sock == -1 ) {
+		ESP_LOGI(TAG, "Error: sock() failed");
+		return -1;
+	}
 
-  temp.sin_family = AF_INET;
-  temp.sin_port = htons(port);
-  //inet_pton(AF_INET, dest, &temp.sin_addr);
-  err = inet_aton(dest, &temp.sin_addr);
-  if ( err == 0 ) {
-    ESP_LOGI(TAG, "Error: inet_aton() failed");
-    return -1;
-  }
-  ESP_LOGI(TAG, "Try Connecting to '%s'...", inet_ntoa(temp.sin_addr));
+	temp.sin_family = AF_INET;
+	temp.sin_port = htons(port);
+	//inet_pton(AF_INET, dest, &temp.sin_addr);
+	err = inet_aton(dest, &temp.sin_addr);
+	if ( err == 0 ) {
+		ESP_LOGI(TAG, "Error: inet_aton() failed");
+		return -1;
+	}
+	ESP_LOGI(TAG, "Try Connecting to '%s'...", inet_ntoa(temp.sin_addr));
 
-  err = connect(sock, (struct sockaddr*) &temp, sizeof(temp));
-  if ( err == -1 ) {
-    ESP_LOGI(TAG, "Error: connect() failed");
-    ESP_LOGI(TAG, "Error: show meaning: %s\n", strerror(errno));
-    return -1;
-  }
+	err = connect(sock, (struct sockaddr*) &temp, sizeof(temp));
+	if ( err == -1 ) {
+		ESP_LOGI(TAG, "Error: connect() failed");
+		ESP_LOGI(TAG, "Error: show meaning: %s\n", strerror(errno));
+		return -1;
+	}
 
-  ESP_LOGI(TAG, "Connected to %s", inet_ntoa(temp.sin_addr));
-  return sock;
+	ESP_LOGI(TAG, "Connected to %s", inet_ntoa(temp.sin_addr));
+	return sock;
 }
 
 void SendData(int sock, std::string data) {
-  int nsend = -1;
-  uint32_t dim = htonl(data.length());
-  nsend = send(sock, &dim, sizeof(uint32_t), 0);
-  nsend = send(sock, data.c_str(), data.length(), 0);
+	int nsend = -1;
+	//uint32_t dim = htonl(data.length());
+	//nsend = send(sock, &dim, sizeof(uint32_t), 0);
+	int dim = htonl(data.length());
+	//printf("--- Dim: %d\n", dim);
+	nsend = send(sock, &dim, sizeof(int), 0);
+	if(nsend < sizeof(int))
+		printf("--- Error on sending size\n");
+	else
+		printf("--- Socket: size sent\n");
+	nsend = send(sock, data.c_str(), data.length(), 0);
+	if(nsend < data.length())
+		printf("--- Error on sending data\n");
+	else
+		printf("--- Socket: data sent\n");
 }
 
-long ReceiveData(int sock){
-	long time;
-	int result = recv(sock, (void *)&time, sizeof(long), 0);
+unsigned long ReceiveData(int sock){
+	char strtime[11];
+	unsigned long time = 0;
+	int result = recv(sock, (void *)strtime, 10, 0);
+	printf("--- Bytes received: %d\n", result);
+	strtime[10] = '\0';
+	time = strtoul (strtime, NULL, 0);
 	time = ntohl(time);
+	printf("--- Prova: %lu\n", time);
 	return time;
+}
+
+void waitResponse(int sock){
+
 }

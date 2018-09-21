@@ -131,10 +131,12 @@ controller.o: /home/stefano/git/esp32_2/main/controller.cc \
  /home/stefano/esp/esp-idf/components/newlib/include/inttypes.h \
  /home/stefano/git/esp32_2/main/../include/wifi_packet.h \
  /home/stefano/git/esp32_2/main/../include/esp_socket.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/port/netinet/in.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/port/arpa/inet.h \
  /home/stefano/git/esp32_2/main/../include/my_mdns.h \
  /home/stefano/esp/esp-idf/components/mdns/include/mdns.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_event.h \
- /home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/netdb.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/netdb.h
 
@@ -402,13 +404,17 @@ controller.o: /home/stefano/git/esp32_2/main/controller.cc \
 
 /home/stefano/git/esp32_2/main/../include/esp_socket.h:
 
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/port/netinet/in.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/port/arpa/inet.h:
+
 /home/stefano/git/esp32_2/main/../include/my_mdns.h:
 
 /home/stefano/esp/esp-idf/components/mdns/include/mdns.h:
 
 /home/stefano/esp/esp-idf/components/esp32/include/esp_event.h:
-
-/home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h:
 
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/netdb.h:
 

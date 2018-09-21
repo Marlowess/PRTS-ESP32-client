@@ -20,6 +20,13 @@ config SERVER_HOSTNAME
 	help
 		Server hostname for collecting captured data
 
+config SERVER_PORT
+  int "Server TCP port"
+  range 1 65535
+  default 80
+  help
+    Enter the TCP port the server is listening on
+
 config MDNS_HOSTNAME
     string "mDNS Hostname"
 	default "esp32-mdns"

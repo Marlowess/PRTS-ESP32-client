@@ -141,7 +141,8 @@ void timestampExchFunc(void *pvParameters){
 		cout << "--- Trying to connect" << '\n';
 		s = CreateSocket(address, SERVER_PORT);
 		if(s != -1){
-			SendData(s, std::move("|"));
+			//SendData(s, std::move("|"));
+			SendData(s, std::string("|"));
 			cout << "--- Timestamp request sent" << '\n';
 			long time = ReceiveData(s);
 			setTime(time);
@@ -198,11 +199,12 @@ void storingFunc(void *pvParameters){
 				cout << st << endl;
 				SendData(s, st);
 			}
-			SendData(s, std::move("|"));
-			cout << "End of packets transmission. Waiting for timestamp..." << '\n';
-			long time = ReceiveData(s);
-			setTime(time);
-			printf("--- Now: %ld\n", getTime());
+//			SendData(s, string("|"));
+//			cout << "End of packets transmission. Waiting for timestamp..." << '\n';
+//			long time = ReceiveData(s);
+//			//long time = 1;
+//			setTime(time);
+//			printf("--- Now: %ld\n", getTime());
 		}
 
 		CloseSocket(s);
@@ -210,7 +212,8 @@ void storingFunc(void *pvParameters){
 
 		xEventGroupClearBits(wifi_event_group, WIFI_CONNECTED_BIT);
 		esp_wifi_disconnect();
-		xTaskNotifyGive(xHandleSniffing);
+		//xTaskNotifyGive(xHandleSniffing);
+		xTaskNotifyGive(xHandleTimes);
 	}
 }
 
@@ -392,7 +395,7 @@ void printTime(){
 /**
  * It's set board time according to one received from server
  */
-void setTime(long seconds){
+void setTime(unsigned long seconds){
 	struct timeval time;
 	time.tv_sec = (time_t)seconds;
 	time.tv_usec = (suseconds_t)0;
@@ -408,13 +411,13 @@ void setTime(long seconds){
 /**
  * It gets time from board and sets timestamp field in captured packet
  */
-long getTime(){
+unsigned long getTime(){
 	struct timeval time;
 	int res = gettimeofday(&time, NULL);
 	if(res == -1)
-		return (long)-1;
+		return (unsigned long)-1;
 	else
-		return (long long)time.tv_sec;
+		return (unsigned long)time.tv_sec;
 }
 
 int setSelect(int s){
