@@ -30,6 +30,8 @@ using namespace std;
 const int IP4_CONNECTED_BIT = BIT0;
 const int IP6_CONNECTED_BIT = BIT1;
 
+uint8_t mac_address[6];
+
 TaskHandle_t xHandleSniffing;
 TaskHandle_t xHandleStoring;
 TaskHandle_t xHandleTimes; // task to exchange time informations
@@ -231,6 +233,9 @@ void tasksCreation(){
 	wifi_event_group = xEventGroupCreate();
 
 	initialise_mdns();
+	ESP_ERROR_CHECK(esp_efuse_mac_get_default(mac_address));
+	printf("--- MAC address: %02X:%02X:%02X:%02X:%02X:%02X\n", mac_address[0],mac_address[1],
+			mac_address[2],mac_address[3],mac_address[4],mac_address[5]);
 
 	myList = new list<Wifi_packet>();
 
