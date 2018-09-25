@@ -14,13 +14,13 @@ void app_main(){
     }
     ESP_ERROR_CHECK(ret);
 
-    /* Creation of two tasks */
-    //printTime();
-    //setTime(1533751110);
-    //vTaskDelay(3000 / portTICK_PERIOD_MS);
-    //printTime();
+    /*
+     * This function creates three tasks:
+     * 	1) task to exchange timestamp with server
+     * 	2) task to sniff wifi traffic
+     * 	3) task to exchange wifi data with server
+     *  */
     tasksCreation();
-    //mdnsFunc();
 }
 #ifdef __cplusplus
   }

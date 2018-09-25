@@ -14,6 +14,7 @@
 #include <unistd.h>
 #include <functional> //for std::hash
 #include <string>
+#include <vector>
 
 using namespace std;
 #define ebST_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY)
@@ -52,12 +53,29 @@ static EventGroupHandle_t wifi_event_group;
 /* Sets for select function */
 fd_set csetRead, csetWrite, csetErr;
 
+/** It splits according to delimiter, and returns a vector **/
+std::vector<std::string> split(const std::string& s, char delimiter){
+   std::vector<std::string> tokens;
+   std::string token;
+   std::istringstream tokenStream(s);
+   while (std::getline(tokenStream, token, delimiter)){
+      tokens.push_back(token);
+   }
+   return tokens;
+}
+
 /**
  * This function creates an hash string before sending data to server
- */
+ **/
 static string hashFunction(string str){
+	std::vector<std::string> tokens = split(str, ',');
 	hash<std::string> hasher;
-	auto hashed = hasher(str); //returns std::size_t
+	stringstream data;
+
+	for(int i = 0; i < tokens.size(); i++)
+		data << tokens.at(i);
+
+	auto hashed = hasher(data.str()); //returns std::size_t
 	stringstream ss;
 	ss << hashed << "\r\n";
 	string st = ss.str();
@@ -66,7 +84,7 @@ static string hashFunction(string str){
 
 /**
  * It initialises the mdns protocol service
- */
+ **/
 static void initialise_mdns(void){
 	//initialize mDNS
 	ESP_ERROR_CHECK( mdns_init() );
@@ -196,18 +214,19 @@ void storingFunc(void *pvParameters){
 				string hashCode = hashFunction(data);
 
 				stringstream ss;
-				ss << data << "," << hashCode;
+
+				char buffer[13];
+				buffer[12] = 0;
+				for(int j = 0; j < 6; j++)
+					sprintf(&buffer[2*j], "%02X", mac_address[j]);
+
+				ss << buffer;
+				ss << "," << data << "," << hashCode;
 				string st = ss.str();
 
 				cout << st << endl;
 				SendData(s, st);
 			}
-			//			SendData(s, string("|"));
-			//			cout << "End of packets transmission. Waiting for timestamp..." << '\n';
-			//			long time = ReceiveData(s);
-			//			//long time = 1;
-			//			setTime(time);
-			//			printf("--- Now: %ld\n", getTime());
 		}
 
 		CloseSocket(s);
