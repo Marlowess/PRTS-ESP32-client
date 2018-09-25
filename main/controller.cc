@@ -16,6 +16,7 @@
 #include <string>
 #include <vector>
 
+
 using namespace std;
 #define ebST_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY)
 #define ebSN_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY + 1)
@@ -55,30 +56,34 @@ fd_set csetRead, csetWrite, csetErr;
 
 /** It splits according to delimiter, and returns a vector **/
 std::vector<std::string> split(const std::string& s, char delimiter){
-   std::vector<std::string> tokens;
-   std::string token;
-   std::istringstream tokenStream(s);
-   while (std::getline(tokenStream, token, delimiter)){
-      tokens.push_back(token);
-   }
-   return tokens;
+	std::vector<std::string> tokens;
+	std::string token;
+	std::istringstream tokenStream(s);
+	while (std::getline(tokenStream, token, delimiter)){
+		tokens.push_back(token);
+	}
+	return tokens;
 }
 
 /**
  * This function creates an hash string before sending data to server
  **/
-static string hashFunction(string str){
+static std::string hashFunction(std::string str){
 	std::vector<std::string> tokens = split(str, ',');
-	hash<std::string> hasher;
-	stringstream data;
+	std::hash<std::string> hasher;
+	std::stringstream data;
 
-	for(int i = 0; i < tokens.size(); i++)
+	for(int i = 0; i < tokens.size(); i++){
+		printf("--- Hash token: %s\n", tokens.at(i).c_str());
 		data << tokens.at(i);
+	}
+
 
 	auto hashed = hasher(data.str()); //returns std::size_t
-	stringstream ss;
+	std::stringstream ss;
 	ss << hashed << "\r\n";
-	string st = ss.str();
+	std::string st = ss.str();
+	printf("--- Hash function: %s\n", st.c_str());
 	return st;
 }
 
@@ -210,18 +215,20 @@ void storingFunc(void *pvParameters){
 		s = CreateSocket(address, SERVER_PORT);
 		if(s != -1){
 			for (auto it = myList->begin(); it != myList->end(); ++it){
-				string data = it->retrieveData();
-				string hashCode = hashFunction(data);
-
-				stringstream ss;
 
 				char buffer[13];
 				buffer[12] = 0;
 				for(int j = 0; j < 6; j++)
 					sprintf(&buffer[2*j], "%02X", mac_address[j]);
-
+				stringstream ss;
 				ss << buffer;
-				ss << "," << data << "," << hashCode;
+				string data = it->retrieveData();
+				ss << "," << data;
+
+				/* TODO Implementare una nuova funzione di hash standard, come MD5 */
+				string hashCode = hashFunction(ss.str());
+
+				ss << "," << hashCode;
 				string st = ss.str();
 
 				cout << st << endl;

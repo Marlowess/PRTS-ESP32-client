@@ -9,7 +9,7 @@ std::string Wifi_packet::getSenderAddr(){
 	//std::ostringstream oss;
 	char str[18] = "";
 	for(int i = 0; i < 5; i++)
-		sprintf(str, "%s%02x:", str, this->addr2[i]);
+		sprintf(str, "%s%02x", str, this->addr2[i]);
 	sprintf(str, "%s%02x", str, this->addr2[5]);
 	return std::string(str);
 }
