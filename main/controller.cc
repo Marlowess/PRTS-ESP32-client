@@ -12,7 +12,6 @@
 #include "../include/esp_socket.h"
 #include "../include/my_mdns.h"
 #include <unistd.h>
-#include <functional> //for std::hash
 #include <string>
 #include <vector>
 
@@ -65,25 +64,30 @@ std::vector<std::string> split(const std::string& s, char delimiter){
 	return tokens;
 }
 
+static std::string myHash( const string &key) {
+	int hashVal = 17;
+	std::stringstream data;
+
+	for(int i = 0; i<key.length();  i++){
+		hashVal = (hashVal+key[i])%10;
+		data << hashVal;
+	}
+	return data.str();
+}
+
 /**
  * This function creates an hash string before sending data to server
  **/
 static std::string hashFunction(std::string str){
 	std::vector<std::string> tokens = split(str, ',');
-	std::hash<std::string> hasher;
 	std::stringstream data;
 
-	for(int i = 0; i < tokens.size(); i++){
-		printf("--- Hash token: %s\n", tokens.at(i).c_str());
+	for(int i = 0; i < tokens.size(); i++)
 		data << tokens.at(i);
-	}
 
-
-	auto hashed = hasher(data.str()); //returns std::size_t
 	std::stringstream ss;
-	ss << hashed << "\r\n";
+	ss << myHash(data.str()) << "\r\n";
 	std::string st = ss.str();
-	printf("--- Hash function: %s\n", st.c_str());
 	return st;
 }
 
