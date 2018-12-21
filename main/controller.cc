@@ -14,7 +14,9 @@
 #include <unistd.h>
 #include <string>
 #include <vector>
-
+#include <stdio.h>      /* printf, NULL */
+#include <stdlib.h>
+#include "apps/sntp/sntp.h"
 
 using namespace std;
 #define ebST_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY)
@@ -24,6 +26,7 @@ using namespace std;
 #define EXAMPLE_MDNS_INSTANCE CONFIG_MDNS_INSTANCE
 #define SERVER_HOSTNAME CONFIG_SERVER_HOSTNAME
 #define SERVER_PORT CONFIG_SERVER_PORT
+
 
 /* The event group allows multiple bits for each event,
    but we only care about one event - are we connected
@@ -39,7 +42,6 @@ TaskHandle_t xHandleTimes; // task to exchange time informations
 
 /* This list contains wifi packets */
 list<Wifi_packet> *myList;
-
 
 uint8_t channel = 1;
 int i = 13;
@@ -160,93 +162,33 @@ static void do_mdsnQuery(const char *host){
  * in order to perform a more accurate analysis.
  */
 void timestampExchFunc(void *pvParameters){
-	while(true){
-		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-		wifi_init_sta();
-		xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, false, true, portMAX_DELAY);
-
-		do_mdsnQuery(SERVER_HOSTNAME);
-
-		cout << "--- Trying to connect" << '\n';
-		s = CreateSocket(address, SERVER_PORT);
-		if(s != -1){
-			//SendData(s, std::move("|"));
-			SendData(s, std::string("|"));
-			cout << "--- Timestamp request sent" << '\n';
-			long time = ReceiveData(s);
-			setTime(time);
-			printf("--- Timestamp received: %ld\n", getTime());
-			waitResponse(s);
-			printf("--- Timestamp task ended, control given to sniffing task\n");
-			CloseSocket(s);
+	ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+	sntp_setoperatingmode(SNTP_OPMODE_POLL);
+	sntp_setservername(0, address);
+	setenv("TZ", "CET-1CEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00", 1);
+	tzset();
+	sntp_init();
+	bool flag = true;
+		while(true){
+			time_t now;
+			time(&now);
+			setTime(now);
+			if(flag){
+				flag = false;
+				xTaskNotifyGive(xHandleSniffing);
+			}
+			vTaskDelay(5000);
 		}
-
-		xEventGroupClearBits(wifi_event_group, WIFI_CONNECTED_BIT);
-		esp_wifi_disconnect();
-		xTaskNotifyGive(xHandleSniffing);
-	}
 }
 
 /**
  * This function is used to set the handler to save packets
  *  **/
 void sniffingFunc(void *pvParameters){
+	ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+	wifi_sniffer_init();
 	while(true){
-		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-		wifi_sniffer_init();
-		changeChannel();
-		esp_wifi_set_promiscuous(false);
-		ESP_ERROR_CHECK(esp_wifi_stop());
-		ESP_ERROR_CHECK(esp_wifi_deinit());
-		xTaskNotifyGive(xHandleStoring);
-	}
-}
 
-
-/** This function is used to talk with the server and to send it the data about wifi packets
- *  captured in the promiscuous mode before
- *  **/
-void storingFunc(void *pvParameters){
-	while(true){
-		ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-		wifi_init_sta();
-		xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, false, true, portMAX_DELAY);
-
-		/*
-		 * Inserire qui la funzione per comunicare i dati letti al server
-		 */
-
-		s = CreateSocket(address, SERVER_PORT);
-		if(s != -1){
-			for (auto it = myList->begin(); it != myList->end(); ++it){
-
-				char buffer[13];
-				buffer[12] = 0;
-				for(int j = 0; j < 6; j++)
-					sprintf(&buffer[2*j], "%02X", mac_address[j]);
-				stringstream ss;
-				ss << buffer;
-				string data = it->retrieveData();
-				ss << "," << data;
-
-				/* TODO Implementare una nuova funzione di hash standard, come MD5 */
-				string hashCode = hashFunction(ss.str());
-
-				ss << "," << hashCode;
-				string st = ss.str();
-
-				cout << st << endl;
-				SendData(s, st);
-			}
-		}
-
-		CloseSocket(s);
-		myList->clear();
-
-		xEventGroupClearBits(wifi_event_group, WIFI_CONNECTED_BIT);
-		esp_wifi_disconnect();
-		//xTaskNotifyGive(xHandleSniffing);
-		xTaskNotifyGive(xHandleTimes);
 	}
 }
 
@@ -267,7 +209,14 @@ void tasksCreation(){
 	printf("--- MAC address: %02X:%02X:%02X:%02X:%02X:%02X\n", mac_address[0],mac_address[1],
 			mac_address[2],mac_address[3],mac_address[4],mac_address[5]);
 
-	myList = new list<Wifi_packet>();
+	wifi_init_sta();
+	xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, false, true, portMAX_DELAY);
+	do_mdsnQuery(SERVER_HOSTNAME);
+
+	cout << "--- Trying to connect" << '\n';
+	//s = CreateSocket(address, SERVER_PORT);
+	s = CreateSocket(address, SERVER_PORT);
+
 
 	if(xTaskCreate(sniffingFunc, "Sniffing task", 2048, NULL, ebSN_BIT_TASK_PRIORITY, &xHandleSniffing) == pdPASS)
 		printf("Sniffing task created!\n");
@@ -276,17 +225,10 @@ void tasksCreation(){
 
 	if(xTaskCreate(timestampExchFunc, "Timestamp task", 2048, NULL, ebSN_BIT_TASK_PRIORITY, &xHandleTimes) == pdPASS)
 		printf("Timestamp task created!\n");
-
-	if(xTaskCreate(storingFunc, "Storing task", 4096, NULL, ebST_BIT_TASK_PRIORITY, &xHandleStoring) == pdPASS)
-		printf("Storing task created!\n");
 	else
-		printf("Error on creating the storing task!\n");
-
-	/* The first task to launch is the sniffing task */
-	//xTaskNotifyGive(xHandleSniffing);
+		printf("Error on creating the timestamp task!\n");
 
 	xTaskNotifyGive(xHandleTimes);
-	//hashFunction(string("Stringa di prova!"));
 }
 
 /**
@@ -398,22 +340,25 @@ void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type){
 
 	printf("--- Packet captured\n");
 
-	const Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, getTime(), ssid_, *ssid_len + 1);
-	myList->push_back(packet);
-}
+	Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, getTime(), ssid_, *ssid_len + 1);
+	//myList->push_back(packet);
+	char buffer[13];
+	buffer[12] = 0;
+	for(int j = 0; j < 6; j++)
+		sprintf(&buffer[2*j], "%02X", mac_address[j]);
+	stringstream ss;
+	ss << buffer;
+	string data = packet.retrieveData();
+	ss << "," << data;
 
-/**
- * When we're in promiscuous mode, this function changes the channel, to scan any wifi "space"
- *  **/
-void changeChannel(){
-	i = 13;
-	channel = 1;
-	while(i-- > 0){
-		vTaskDelay(3000 / portTICK_PERIOD_MS);
-		esp_wifi_set_channel(channel, WIFI_SECOND_CHAN_NONE);
-		printf("--- Canale di cattura: %d\n", channel);
-		channel = (channel % WIFI_CHANNEL_MAX) + 1;
-	}
+	/* TODO Implementare una nuova funzione di hash standard, come MD5 */
+	string hashCode = hashFunction(ss.str());
+
+	ss << "," << hashCode;
+	string st = ss.str();
+
+	cout << st << endl;
+	SendData(s, st);
 }
 
 void printTime(){
@@ -427,13 +372,12 @@ void printTime(){
 	}
 }
 
-//1533370708
 /**
  * It's set board time according to one received from server
  */
-void setTime(unsigned long seconds){
+void setTime(time_t seconds){
 	struct timeval time;
-	time.tv_sec = (time_t)seconds;
+	time.tv_sec = seconds;
 	time.tv_usec = (suseconds_t)0;
 
 	int res = settimeofday(&time, NULL);

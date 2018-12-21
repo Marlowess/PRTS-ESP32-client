@@ -138,7 +138,9 @@ controller.o: /home/stefano/git/esp32_2/main/controller.cc \
  /home/stefano/esp/esp-idf/components/mdns/include/mdns.h \
  /home/stefano/esp/esp-idf/components/esp32/include/esp_event.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/netdb.h \
- /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/netdb.h
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/netdb.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h
 
 /home/stefano/git/esp32_2/main/../include/controller.h:
 
@@ -419,4 +421,8 @@ controller.o: /home/stefano/git/esp32_2/main/controller.cc \
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/netdb.h:
 
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/netdb.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h:
 /home/stefano/git/esp32_2/main/./controller.cc:
