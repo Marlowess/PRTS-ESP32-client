@@ -169,16 +169,26 @@ void timestampExchFunc(void *pvParameters){
 	tzset();
 	sntp_init();
 	bool flag = true;
-		while(true){
-			time_t now;
-			time(&now);
-			setTime(now);
-			if(flag){
-				flag = false;
-				xTaskNotifyGive(xHandleSniffing);
-			}
-			vTaskDelay(5000);
+	while(true){
+		printf("--- Getting timestamp\n");
+		time_t now;
+		time(&now);
+		setTime(now);
+		if(flag){
+			flag = false;
+			xTaskNotifyGive(xHandleSniffing);
 		}
+		vTaskDelay(5000);
+
+		/* Here I check that socket is still opened. If not I have to open it */
+		printf("--- Checking socket status\n");
+//		if(s == -1){
+		printf("--- Trying to open socket");
+		s = CreateSocket(address, SERVER_PORT);
+		if(s != -1)
+			printf("--- Socket opened!");
+//		}
+	}
 }
 
 /**
@@ -206,6 +216,7 @@ void tasksCreation(){
 
 	initialise_mdns();
 	ESP_ERROR_CHECK(esp_efuse_mac_get_default(mac_address));
+
 	printf("--- MAC address: %02X:%02X:%02X:%02X:%02X:%02X\n", mac_address[0],mac_address[1],
 			mac_address[2],mac_address[3],mac_address[4],mac_address[5]);
 
@@ -213,7 +224,7 @@ void tasksCreation(){
 	xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, false, true, portMAX_DELAY);
 	do_mdsnQuery(SERVER_HOSTNAME);
 
-	cout << "--- Trying to connect" << '\n';
+	cout << "--- Trying to open socket" << '\n';
 	//s = CreateSocket(address, SERVER_PORT);
 	s = CreateSocket(address, SERVER_PORT);
 
@@ -398,49 +409,5 @@ unsigned long getTime(){
 		return (unsigned long)-1;
 	else
 		return (unsigned long)time.tv_sec;
-}
-
-int setSelect(int s){
-	struct timeval tval;
-	int n;
-	FD_ZERO(&csetRead);
-	FD_ZERO(&csetErr);
-	FD_ZERO(&csetWrite);
-	FD_SET(s, &csetRead);
-	FD_SET(s, &csetWrite);
-	FD_SET(s, &csetErr);
-
-	tval.tv_sec = 3; // timeout di tre secondi
-	tval.tv_usec = 0; // zero millisecondi
-	n = select(FD_SETSIZE, &csetRead, &csetWrite, &csetErr, &tval);
-
-	return n;
-}
-
-int doActionSelect(int n, int s){
-	if(n == 0){ //nessun set ha soddisfatto le condizioni, quindi Ã¨ scaduto il tempo
-		fprintf(stderr, "No response from server after 3 seconds.\n");
-		CloseSocket(s);
-		return -1;
-	}
-	else{
-		if(FD_ISSET(s, &csetErr)){
-			fprintf(stderr, "An error has occured. The connection has been closed by server.");
-			CloseSocket(s);
-			return -1;
-		}
-		else{
-			// in questo caso non c'Ã¨ nulla da segnalare, perchÃ¨ lo sblocco Ã¨ avvenuto in seguito
-			// a nuovi dati da leggere o da scrivere
-			clearSetSelect(s);
-			return 0;
-		}
-	}
-}
-
-void clearSetSelect(int s){
-	FD_CLR(s, &csetRead);
-	FD_CLR(s, &csetWrite);
-	FD_CLR(s, &csetErr);
 }
 
