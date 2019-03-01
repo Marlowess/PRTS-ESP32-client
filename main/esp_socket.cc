@@ -41,6 +41,7 @@ int CreateSocket(char *dest, int port) {
 }
 
 void SendData(int sock, std::string data) {
+	if(sock == -1) return;
 	int nsend = -1;
 	//uint32_t dim = htonl(data.length());
 	//nsend = send(sock, &dim, sizeof(uint32_t), 0);

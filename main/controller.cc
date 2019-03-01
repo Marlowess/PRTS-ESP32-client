@@ -17,6 +17,11 @@
 #include <stdio.h>      /* printf, NULL */
 #include <stdlib.h>
 #include "apps/sntp/sntp.h"
+#include <signal.h>
+#include <ctype.h>
+#include <inttypes.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 using namespace std;
 #define ebST_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY)
@@ -47,6 +52,7 @@ uint8_t channel = 1;
 int i = 13;
 char *address = "10.42.0.1";
 int s = -1;
+
 static bool auto_reconnect = true;
 
 /* FreeRTOS event group to signal when we are connected*/
@@ -181,13 +187,35 @@ void timestampExchFunc(void *pvParameters){
 		vTaskDelay(5000);
 
 		/* Here I check that socket is still opened. If not I have to open it */
-		printf("--- Checking socket status\n");
-//		if(s == -1){
-		printf("--- Trying to open socket");
-		s = CreateSocket(address, SERVER_PORT);
-		if(s != -1)
-			printf("--- Socket opened!");
-//		}
+			printf("--- Checking socket status\n");
+
+			if(s == -1){
+				printf("--- Trying to open socket");
+				s = CreateSocket(address, SERVER_PORT);
+				if(s != -1)
+					printf("--- Socket opened!");
+			}
+			else{
+				int error = 0;
+				socklen_t len = sizeof (error);
+				int retval = getsockopt(s, SOL_SOCKET, SO_ERROR, &error, &len);
+
+				if (retval != 0) {
+					/* there was a problem getting the error code */
+					fprintf(stderr, "--- Error getting socket error code: %s\n", strerror(retval));
+					return;
+				}
+				if (error != 0) {
+					/* socket has a non zero error status */
+					fprintf(stderr, "socket error: %s\n", strerror(error));
+					close(s);
+					s = -1;
+					printf("--- Trying to open socket");
+					s = CreateSocket(address, SERVER_PORT);
+					if(s != -1)
+						printf("--- Socket opened!");
+				}
+			}
 	}
 }
 
