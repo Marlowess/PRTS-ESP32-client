@@ -3,7 +3,10 @@
 static const char *TAG = "simple wifi";
 
 void CloseSocket(int sock) {
-	close(sock);
+	if(close(sock) == -1)
+		ESP_LOGI(TAG, "Close error: %s", strerror(errno));
+	else
+		ESP_LOGI(TAG, "Close done!");
 	return;
 }
 
@@ -16,6 +19,7 @@ int CreateSocket(char *dest, int port) {
 	sock = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if ( sock == -1 ) {
 		ESP_LOGI(TAG, "Error: sock() failed");
+		ESP_LOGI(TAG, "Create error: %s", strerror(errno));
 		return -1;
 	}
 
@@ -33,7 +37,7 @@ int CreateSocket(char *dest, int port) {
 	if ( err == -1 ) {
 		ESP_LOGI(TAG, "Error: connect() failed");
 		ESP_LOGI(TAG, "Error: show meaning: %s\n", strerror(errno));
-		return -1;
+		return sock;
 	}
 
 	ESP_LOGI(TAG, "Connected to %s", inet_ntoa(temp.sin_addr));
@@ -82,3 +86,18 @@ void waitResponse(int sock){
 	else
 		printf("--- Wrong starting signal received\n");
 }
+
+
+bool isclosed(int sock) {
+	fd_set rfd;
+	FD_ZERO(&rfd);
+	FD_SET(sock, &rfd);
+	struct timeval time;
+	time.tv_sec = 0;
+	time.tv_usec = (suseconds_t)0;
+	select(sock+1, &rfd, 0, 0, &time);
+	if (!FD_ISSET(sock, &rfd))
+		return false;
+	return true;
+}
+

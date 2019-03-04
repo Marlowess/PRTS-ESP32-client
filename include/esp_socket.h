@@ -16,11 +16,16 @@
 #include <errno.h>
 #include <stdio.h>
 #include "esp_log.h"
+#include <sys/ioctl.h>
+
 
 void CloseSocket(int sock);
 int CreateSocket(char *dest, int port);
 void SendData(int sock, std::string data);
 unsigned long ReceiveData(int sock);
 void waitResponse(int sock);
+bool isclosed(int sock);
+
+
 
 #endif // ESP_SOCKET_H

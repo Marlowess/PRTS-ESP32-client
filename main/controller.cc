@@ -23,6 +23,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+
 using namespace std;
 #define ebST_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY)
 #define ebSN_BIT_TASK_PRIORITY	(tskIDLE_PRIORITY + 1)
@@ -175,47 +176,60 @@ void timestampExchFunc(void *pvParameters){
 	tzset();
 	sntp_init();
 	bool flag = true;
+	const TickType_t xDelay = 10000 / portTICK_PERIOD_MS;
 	while(true){
 		printf("--- Getting timestamp\n");
 		time_t now;
 		time(&now);
 		setTime(now);
+		std::cout << "--- Now timestamp: " << now << "\n";
 		if(flag){
 			flag = false;
 			xTaskNotifyGive(xHandleSniffing);
 		}
-		vTaskDelay(5000);
 
-		/* Here I check that socket is still opened. If not I have to open it */
-			printf("--- Checking socket status\n");
-
-			if(s == -1){
-				printf("--- Trying to open socket");
-				s = CreateSocket(address, SERVER_PORT);
-				if(s != -1)
-					printf("--- Socket opened!");
-			}
-			else{
-				int error = 0;
-				socklen_t len = sizeof (error);
-				int retval = getsockopt(s, SOL_SOCKET, SO_ERROR, &error, &len);
-
-				if (retval != 0) {
-					/* there was a problem getting the error code */
-					fprintf(stderr, "--- Error getting socket error code: %s\n", strerror(retval));
-					return;
-				}
-				if (error != 0) {
-					/* socket has a non zero error status */
-					fprintf(stderr, "socket error: %s\n", strerror(error));
-					close(s);
-					s = -1;
-					printf("--- Trying to open socket");
-					s = CreateSocket(address, SERVER_PORT);
-					if(s != -1)
-						printf("--- Socket opened!");
-				}
-			}
+		//		/* Here I check that socket is still opened. If not I have to open it */
+		//		printf("--- Checking socket status\n");
+		//
+		//		if(s == -1){
+		//			printf("--- Trying to open socket");
+		//			s = CreateSocket(address, SERVER_PORT);
+		//			if(s != -1)
+		//				printf("--- Socket opened!");
+		//		}
+		//		else{
+		//			int error = 0;
+		//			socklen_t len = sizeof (error);
+		//			int retval = getsockopt(s, SOL_SOCKET, SO_ERROR, &error, &len);
+		//
+		//			if (retval != 0) {
+		//				/* there was a problem getting the error code */
+		//				fprintf(stderr, "--- Error getting socket error code: %s\n", strerror(retval));
+		//				return;
+		//			}
+		//			if (error != 0) {
+		//				/* socket has a non zero error status */
+		//				fprintf(stderr, "socket error: %s\n", strerror(error));
+		//				close(s);
+		//				s = -1;
+		//				printf("--- Trying to open socket");
+		//				s = CreateSocket(address, SERVER_PORT);
+		//				if(s != -1)
+		//					printf("--- Socket opened!");
+		//			}
+		//		}
+//		if(!isclosed(s)){
+//			printf("--- This socket is closed!\n");
+//			CloseSocket(s);
+//			printf("--- Trying to open socket");
+//			s = CreateSocket(address, SERVER_PORT);
+//			if(s != -1)
+//				printf("--- Socket opened!");
+//		}
+		if(s != -1)
+			CloseSocket(s);
+		s = CreateSocket(address, SERVER_PORT);
+		vTaskDelay(xDelay);
 	}
 }
 
