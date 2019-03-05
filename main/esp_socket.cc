@@ -37,7 +37,9 @@ int CreateSocket(char *dest, int port) {
 	if ( err == -1 ) {
 		ESP_LOGI(TAG, "Error: connect() failed");
 		ESP_LOGI(TAG, "Error: show meaning: %s\n", strerror(errno));
-		return sock;
+
+		CloseSocket(sock);
+		return -1;
 	}
 
 	ESP_LOGI(TAG, "Connected to %s", inet_ntoa(temp.sin_addr));
@@ -93,11 +95,11 @@ bool isclosed(int sock) {
 	FD_ZERO(&rfd);
 	FD_SET(sock, &rfd);
 	struct timeval time;
-	time.tv_sec = 0;
+	time.tv_sec = 1;
 	time.tv_usec = (suseconds_t)0;
-	select(sock+1, &rfd, 0, 0, &time);
+	select(sock+1, 0, &rfd, 0, &time);
 	if (!FD_ISSET(sock, &rfd))
-		return false;
-	return true;
+		return true;
+	return false;
 }
 

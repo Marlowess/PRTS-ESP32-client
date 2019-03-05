@@ -53,6 +53,7 @@ uint8_t channel = 1;
 int i = 13;
 char *address = "10.42.0.1";
 int s = -1;
+time_t now = 0;
 
 static bool auto_reconnect = true;
 
@@ -176,12 +177,11 @@ void timestampExchFunc(void *pvParameters){
 	tzset();
 	sntp_init();
 	bool flag = true;
-	const TickType_t xDelay = 10000 / portTICK_PERIOD_MS;
+	const TickType_t xDelay = 20000 / portTICK_PERIOD_MS;
 	while(true){
 		printf("--- Getting timestamp\n");
-		time_t now;
 		time(&now);
-		setTime(now);
+		//setTime(now);
 		std::cout << "--- Now timestamp: " << now << "\n";
 		if(flag){
 			flag = false;
@@ -218,7 +218,7 @@ void timestampExchFunc(void *pvParameters){
 		//					printf("--- Socket opened!");
 		//			}
 		//		}
-//		if(!isclosed(s)){
+//		if(isclosed(s)){
 //			printf("--- This socket is closed!\n");
 //			CloseSocket(s);
 //			printf("--- Trying to open socket");
@@ -226,6 +226,8 @@ void timestampExchFunc(void *pvParameters){
 //			if(s != -1)
 //				printf("--- Socket opened!");
 //		}
+
+
 		if(s != -1)
 			CloseSocket(s);
 		s = CreateSocket(address, SERVER_PORT);
@@ -392,8 +394,9 @@ void wifi_sniffer_packet_handler(void* buff, wifi_promiscuous_pkt_type_t type){
 	const wifi_ieee80211_mac_hdr_t *hdr = &ipkt->hdr;
 
 	printf("--- Packet captured\n");
-
-	Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, getTime(), ssid_, *ssid_len + 1);
+	time(&now);
+	//Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, getTime(), ssid_, *ssid_len + 1);
+	Wifi_packet packet(hdr->addr3, hdr->addr2, ppkt->rx_ctrl.rssi, now, ssid_, *ssid_len + 1);
 	//myList->push_back(packet);
 	char buffer[13];
 	buffer[12] = 0;
