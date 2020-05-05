@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/org.eclipse.linuxtools.cdt.autotools.core.configuration.build.307022143/IDF_PATH/delimiter=\:
+environment/project/org.eclipse.linuxtools.cdt.autotools.core.configuration.build.307022143/IDF_PATH/operation=append
+environment/project/org.eclipse.linuxtools.cdt.autotools.core.configuration.build.307022143/IDF_PATH/value=/home/stefano/esp/esp-idf
+environment/project/org.eclipse.linuxtools.cdt.autotools.core.configuration.build.307022143/append=true
+environment/project/org.eclipse.linuxtools.cdt.autotools.core.configuration.build.307022143/appendContributed=true

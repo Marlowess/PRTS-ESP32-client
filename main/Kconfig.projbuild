@@ -1,37 +1,42 @@
 menu "Example Configuration"
 
-choice ESP_WIFI_MODE
-    prompt "AP or STA"
-    default ESP_WIFI_IS_STATION
-    help
-        Whether the esp32 is softAP or station.
-
-config ESP_WIFI_IS_SOFTAP
-    bool "SoftAP"
-config ESP_WIFI_IS_STATION
-    bool "Station"
-endchoice
-
-config ESP_WIFI_MODE_AP
-    bool
-    default y if ESP_WIFI_IS_SOFTAP
-    default n if ESP_WIFI_IS_STATION
-
 config ESP_WIFI_SSID
     string "WiFi SSID"
-    default "myssid"
-    help
-	SSID (network name) for the example to connect to.
+	default "myssid"
+	help
+		SSID (network name) for the example to connect to.
 
 config ESP_WIFI_PASSWORD
     string "WiFi Password"
-    default "mypassword"
-    help
-	WiFi password (WPA or WPA2) for the example to use.
-		
-config MAX_STA_CONN
-    int "Max STA conn"
-    default 4
-    help
-	Max number of the STA connects to AP.
+	default "mypassword"
+	help
+		WiFi password (WPA or WPA2) for the example to use.
+
+		Can be left blank if the network has no security set.
+
+config SERVER_HOSTNAME
+    string "Server hostname"
+	default ""
+	help
+		Server hostname for collecting captured data
+
+config SERVER_PORT
+  int "Server TCP port"
+  range 1 65535
+  default 80
+  help
+    Enter the TCP port the server is listening on
+
+config MDNS_HOSTNAME
+    string "mDNS Hostname"
+	default "esp32-mdns"
+	help
+		mDNS Hostname for example to use
+
+config MDNS_INSTANCE
+    string "mDNS Instance Name"
+	default "ESP32 with mDNS"
+	help
+		mDNS Instance Name for example to use
+
 endmenu

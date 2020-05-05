@@ -1,25 +1,21 @@
-backup.o: \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/main/backup.c \
- /home/stefano/esp/esp-idf/components/newlib/include/string.h \
+controller.o: /home/stefano/git/esp32_2/main/controller.cc \
+ /home/stefano/git/esp32_2/main/../include/controller.h \
+ /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/stefano/esp/esp-idf/components/newlib/include/newlib.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/config.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/features.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h \
- /home/stefano/esp/esp-idf/components/newlib/include/sys/reent.h \
- /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_types.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/_types.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/lock.h \
- /home/stefano/esp/esp-idf/components/newlib/include/sys/cdefs.h \
- /home/stefano/esp/esp-idf/components/newlib/include/sys/string.h \
- /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdint.h \
  /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h \
+ /home/stefano/git/esp32_2/build/include/sdkconfig.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -31,6 +27,8 @@ backup.o: \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/stefano/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/stefano/esp/esp-idf/components/newlib/include/stdlib.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/stefano/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/stefano/esp/esp-idf/components/newlib/include/alloca.h \
  /home/stefano/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -80,6 +78,8 @@ backup.o: \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/task.h \
  /home/stefano/esp/esp-idf/components/newlib/include/limits.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/list.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/string.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/event_groups.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/timers.h \
  /home/stefano/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -125,9 +125,31 @@ backup.o: \
  /home/stefano/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/stefano/esp/esp-idf/components/nvs_flash/include/nvs.h \
  /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
- /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/inttypes.h \
+ /home/stefano/git/esp32_2/main/../include/wifi_packet.h \
+ /home/stefano/git/esp32_2/main/../include/esp_socket.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/port/netinet/in.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/port/arpa/inet.h \
+ /home/stefano/git/esp32_2/main/../include/my_mdns.h \
+ /home/stefano/esp/esp-idf/components/mdns/include/mdns.h \
+ /home/stefano/esp/esp-idf/components/esp32/include/esp_event.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/netdb.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/netdb.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp.h \
+ /home/stefano/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/signal.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/sys/signal.h \
+ /home/stefano/esp/esp-idf/components/newlib/include/sys/wait.h
 
-/home/stefano/esp/esp-idf/components/newlib/include/string.h:
+/home/stefano/git/esp32_2/main/../include/controller.h:
+
+/home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/sys/reent.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/_ansi.h:
 
@@ -141,10 +163,6 @@ backup.o: \
 
 /home/stefano/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h:
 
-/home/stefano/esp/esp-idf/components/newlib/include/sys/reent.h:
-
-/home/stefano/esp/esp-idf/components/newlib/include/_ansi.h:
-
 /home/stefano/esp/esp-idf/components/newlib/include/sys/_types.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/machine/_types.h:
@@ -153,19 +171,13 @@ backup.o: \
 
 /home/stefano/esp/esp-idf/components/newlib/include/sys/lock.h:
 
-/home/stefano/esp/esp-idf/components/newlib/include/sys/cdefs.h:
-
-/home/stefano/esp/esp-idf/components/newlib/include/sys/string.h:
-
-/home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
-
 /home/stefano/esp/esp-idf/components/newlib/include/stdint.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/build/include/sdkconfig.h:
+/home/stefano/git/esp32_2/build/include/sdkconfig.h:
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -188,6 +200,10 @@ backup.o: \
 /home/stefano/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/stdlib.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/_ansi.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/sys/cdefs.h:
 
 /home/stefano/esp/esp-idf/components/newlib/include/machine/stdlib.h:
 
@@ -287,6 +303,10 @@ backup.o: \
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/list.h:
 
+/home/stefano/esp/esp-idf/components/newlib/include/string.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/sys/string.h:
+
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/event_groups.h:
 
 /home/stefano/esp/esp-idf/components/freertos/include/freertos/timers.h:
@@ -378,4 +398,40 @@ backup.o: \
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
 
 /home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h:
-/home/stefano/esp/esp-idf/examples/wifi/simple_wifi/main/./backup.c:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/inttypes.h:
+
+/home/stefano/git/esp32_2/main/../include/wifi_packet.h:
+
+/home/stefano/git/esp32_2/main/../include/esp_socket.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/port/netinet/in.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/port/arpa/inet.h:
+
+/home/stefano/git/esp32_2/main/../include/my_mdns.h:
+
+/home/stefano/esp/esp-idf/components/mdns/include/mdns.h:
+
+/home/stefano/esp/esp-idf/components/esp32/include/esp_event.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/posix/netdb.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/lwip/netdb.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp.h:
+
+/home/stefano/esp/esp-idf/components/lwip/include/lwip/apps/sntp/sntp_opts.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/signal.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/sys/signal.h:
+
+/home/stefano/esp/esp-idf/components/newlib/include/sys/wait.h:
+/home/stefano/git/esp32_2/main/./controller.cc:
