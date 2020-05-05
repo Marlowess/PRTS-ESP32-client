@@ -1,7 +1,4 @@
-# esp32_2
-
-## Progetto	del	corso
-Anno	accademico	2017-18
+# Sistema di rilevamento presenze per mezzo di dispositivi esp32 (client)
 Una	delle	caratteristiche	degli	smartphone	è	la	loro	capacità	di	riconnettersi	rapidamente	a
 una	 rete	 WiFi	 cui	 sono	 stati	 precedentemente	 associati,	 non	 appena	 si	 vengono	 a	 trovare	
 all’interno	della	sua	area	di	copertura.	Tale	comportamento	è	reso	possibile	dalla	cosiddetta	
@@ -9,13 +6,13 @@ modalità	di	scansione	attiva,	per	la	quale,	invece	di	attendere	passivamente	la
 pacchetto	di	tipo	BEACON	proveniente	dall’access	point,	essi	inviano,	ad	intervalli	regolari,
 pacchetti	broadcast	di	tipo	PROBE	REQUEST,	eventualmente	indicando	il	nome	della	rete	a	cui	
 essi	provano	a	connettersi.	
-Tale	 comportamento	 può	 essere	 utilizzato	 per	 realizzare	 un	 rilevatore	 di	 presenza,	 che	
+<br>Tale	 comportamento	 può	 essere	 utilizzato	 per	 realizzare	 un	 rilevatore	 di	 presenza,	 che	
 determini,	in	una	data	area,	una	stima	del	numero	di	smartphone	presenti.
-Il	dispositivo	ESP32	possiede un’implementazione	firmware	dello	stack	WiFi	che	permette	di	
+<br>Il	dispositivo	ESP32	possiede un’implementazione	firmware	dello	stack	WiFi	che	permette	di	
 registrare	una	callback		che	viene	invocata	ogniqualvolta	venga	ricevuto	un	pacchetto	di	tipo	
 CONTROL,	offrendo così	la	possibilità	di	rilevare	sia	la	presenza	di	BEACON	che	di	PROBE	
 REQUEST.
-Tale	callback	riceve	come	parametro	una	struttura	dati	che	fornisce,	oltre	al	pacchetto	stesso	
+<br>Tale	callback	riceve	come	parametro	una	struttura	dati	che	fornisce,	oltre	al	pacchetto	stesso	
 ricevuto,	anche	altri metadati,	tra	cui	la	potenza	del	segnale	ricevuto	(RSSI	– Received	Signal	
 Strenght	 Indicator).	 In	 condizioni	 ideali,	 tale	 valore	 decresce	 esponenzialmente	 al	 crescere	
 della	distanza	ed è pertanto	espresso	in	forma	logaritmica (dB).	Valori	tipici	variano	tra	-35/-
@@ -24,7 +21,7 @@ realtà,	vari fattori	possono	condizionare	tale	valore,	tra	cui	la	presenza	di	r
 dovute	 al	 terreno,	 ai	 muri	 e agli	 altri	 ostacoli	 alla	 propagazione	 o	 le	 interferenze	 con	 altri	
 segnali	 presenti	 nell’ambiente.	 In	 ogni	 caso,	 esso	 fornisce	 una	 stima	 approssimata	 della	
 distanza.
-Requisiti del	sistema
+<br><br>**Requisiti del	sistema**
 Si	realizzi un	sistema	di	rilevazione	a	due	(o	più)	punti,	formato	da	dispositivi	ESP32	disposti	
 all’interno	di	un	ambiente	a opportuna	distanza	(in	modo	tale	da	sentirsi	reciprocamente)	e	
 da	un	PC	che	agisca	da	collettore	delle	informazioni	raccolte	e	ne	permetta	la	elaborazione	e	la	
@@ -53,7 +50,8 @@ dinamicamente	sullo	schermo	del	PC.
 di	configurazione	del	sistema	e	una	sua	variazione	non	deve	richiedere	modifiche	al	
 software.
 Possibili	estensioni	al	sistema	sono di	seguito	espresse.
-Statistica	di	lungo	periodo
+
+<br>**Statistica	di	lungo	periodo**
 I	dati	raccolti	possono	essere	utilizzati	per	determinare	quali	indirizzi	MAC	siano	stati	ricevuti	
 più	 di	 frequente	 in	 una	 data	 finestra	 temporale	 (anche	 di	 più	 giorni)	 e	 mostrarne una	
 visualizzazione	 grafica sintetica,	 riportante,	 in	 quali	 intervalli	 tali	 dispositivi	 siano	 stati	
@@ -69,18 +67,18 @@ e	la	posizione	stimata	della	stazione,	è	possibile	trovare	delle	correlazioni	c
 tale	 pacchetto	 possa	 essere	 riconducibile	 ad	 altri	 pacchetti precedentemente	 ricevuti.	 Si	
 perfezioni	l’analisi	base	con	i	dati	ottenuti	da	tali	correlazioni,	indicando	il	margine	di	errore	
 stimato.
-Visualizzazione	del	movimento
+<br><br>**Visualizzazione	del	movimento**
 Utilizzando	 i	 dati	 raccolti, il	 sistema	 visualizza,	 sotto	 forma	 di	 animazione controllabile,	 la	
 successione	delle	posizioni	dei	singoli	dispositivi	all’interno	dell’area	per	un	dato	intervallo	
 temporale	a	scelta	dell’utente	del	sistema.	
-Riferimenti
-• Guida	alla	configurazione	dell’ambiente	esp-idf:
+<br><br>**Riferimenti**
+<br>• Guida	alla	configurazione	dell’ambiente	esp-idf:
 https://esp-idf.readthedocs.io/en/latest/get-started/index.html	
-• Guida	alla	configurazione	di	Eclipse	CDT
+<br>• Guida	alla	configurazione	di	Eclipse	CDT
 https://esp-idf.readthedocs.io/en/latest/get-started/eclipse-setup.html	(macOS	e linux)
 https://esp-idf.readthedocs.io/en/latest/get-started/eclipse-setup-windows.html	
 (windows)	
-• Dettagli	sui	pacchetti	di	tipo	PROBE	REQUEST
+<br>• Dettagli	sui	pacchetti	di	tipo	PROBE	REQUEST
 https://mrncciew.com/2014/10/27/cwap-802-11-probe-requestresponse/
-• Presentazione	di un	sistema	simile	sviluppato	presso	l’INIRIA
+<br>• Presentazione	di un	sistema	simile	sviluppato	presso	l’INIRIA
 http://confiance-numerique.clermont-universite.fr/Slides/M-Cunche-2014.pdf
