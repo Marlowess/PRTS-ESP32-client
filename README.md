@@ -1,4 +1,10 @@
 # Sistema di rilevamento presenze per mezzo di dispositivi esp32 (client)
+**Team**
+- **Stefano Brilli** - <a href="https://github.com/Marlowess">@Marlowess</a>
+- **Francesco Chiarlo** - <a href="https://github.com/franec94">@franec94</a>
+- **Enrica Bella** - <a href="https://github.com/EnricaBella">@EnricaBella</a>
+- **Giulio Palomba** - <a href="https://www.linkedin.com/in/giuliopalomba/">@giuliopalomba</a>
+---
 Una	delle	caratteristiche	degli	smartphone	è	la	loro	capacità	di	riconnettersi	rapidamente	a
 una	 rete	 WiFi	 cui	 sono	 stati	 precedentemente	 associati,	 non	 appena	 si	 vengono	 a	 trovare	
 all’interno	della	sua	area	di	copertura.	Tale	comportamento	è	reso	possibile	dalla	cosiddetta	
