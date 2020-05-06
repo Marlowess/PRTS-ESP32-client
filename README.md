@@ -3,7 +3,7 @@
 - **Stefano Brilli** - <a href="https://github.com/Marlowess">@Marlowess</a>
 - **Francesco Chiarlo** - <a href="https://github.com/franec94">@franec94</a>
 - **Enrica Bella** - <a href="https://github.com/EnricaBella">@EnricaBella</a>
-- **Giulio Palomba** - <a href="https://www.linkedin.com/in/giuliopalomba/">@giuliopalomba</a>
+- **Giulio Palomba** - <a href="https://github.com/GPlmb">@GPlmb</a>
 ---
 Una	delle	caratteristiche	degli	smartphone	è	la	loro	capacità	di	riconnettersi	rapidamente	a
 una	 rete	 WiFi	 cui	 sono	 stati	 precedentemente	 associati,	 non	 appena	 si	 vengono	 a	 trovare	
